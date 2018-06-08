@@ -84,11 +84,6 @@ var resData = {
 	data: 'Hi, this is uncle-yang.'
 }
 
-// set router
-app.get('/', function(req, res){
-	res.send('Hello World!');
-});
-
 app.get('/jsonp', function(req, res){
 	res.jsonp(resData);
 });
@@ -121,4 +116,3 @@ var server = app.listen(3500, function(){
     * 因为是本质是script，所以只支持get请求，所以请求大小受限制
 * 优点
     * 兼容性良好
-    * 日常ajax没有太大，平滑切入

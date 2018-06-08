@@ -31,5 +31,5 @@
     * [jsonp](./jsonp.md)
     * [CORS](./cors.md)
     * nginx 代理
-* 猥琐稳重
-    * iframe + 通信(window.name|postMessage) 系列
+* 小复杂
+    * iframe + postMessage

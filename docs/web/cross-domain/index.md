@@ -1,4 +1,4 @@
-### 笨大叔·日常跨域解决方案
+### 日常跨域解决方案
 
 简单的给各位打野(我才不管你是辅助，adc,法师，还是tank)缕缕日常跨域解决方案，如果你是秋名山老司机，请不要停车，毕竟这真的是一趟开往幼儿园的车...
 
@@ -30,6 +30,9 @@
 * 轻量速成(简单配置就可满足你的欲望)
     * [jsonp](./jsonp.md)
     * [CORS](./cors.md)
-    * nginx 代理
+    * [nginx 代理](./nginx.md)
 * 小复杂
-    * iframe + postMessage
+    * [iframe + postMessage](./iframe-postmessage.md)
+* 跨域上传文件
+    * [CORS](./cors-upload.md)
+    * [iframe + postMessage](./iframe-postmessage-upload.md)

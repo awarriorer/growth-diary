@@ -1,9 +1,9 @@
-### 日常跨域解决方案之(CROS)
+### 日常跨域解决方案之(CROS-upload)
 
-这是个相对较新，且比较省力的一个跨域方案。不会说话的我，直接用代码演示
+这是个相对较新，且比较省力的一个跨域方案，直接用代码演示
 CORS，跨域资源共享(Cross-origin resource sharing)
 
-html
+`http://dev.test.com/cors-upload.html`
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +12,8 @@ html
 	<title>cros示例</title>
 </head>
 <body>
-	<button id="but">执行jsonp请求</button>
-	
+	<input type="file" id="but">
+
 	<script type="text/javascript">
 
 		window.onload = function(){
@@ -21,30 +21,61 @@ html
 
 			let but = document.querySelector("#but");
 
-			but.onclick = function(e){
+			but.onchange = function(e){
 				let options = {
-					methods: 'get',
-					url: 'http://dev.cros.com/get-name',
+					methods: 'post',
+					data:{
+						image: e.target.files[0],
+					},
+					url: 'http://dev.example.com/upload-image',
 				};
 
-				request(options, function(res){
+				request(options, function(percent){
+					// 上传进度
+		            console.log("api中的输出---已经上传" + percent);
+				}, function(res){
 					console.log('cors...响应');
 					console.log(res.data);
+
+					// 把照片渲染到body
+					if(res.status){
+						var image = new Image();
+			            image.src = res.data;
+
+			            document.body.appendChild(image)
+					}
+
 				})
 			}
 		}
 
-		function request(options, next){
+		function request(options, process, next){
 			var xhr = new XMLHttpRequest(); 
 			var methods = options.methods.toLocaleUpperCase();
 
 			// 异步传输
 			xhr.open(methods, options.url, true);
 
-			//发送请求
-			xhr.send(null);
+			//创建form对象
+			var formData = new FormData();
 
-			xhr.onreadystatechange = function() {//Call a function when the state changes.
+			let data = options.data || {};
+
+			for(let key in data){
+				formData.append(key, data[key]);
+			}
+
+			xhr.upload.onprogress = function (ev) {//
+		        var percent = 0; 
+
+		        if(ev.lengthComputable) { 
+		            percent = 100 * ev.loaded / ev.total; 		            
+				}
+
+				process && process(percent);
+			}
+
+			xhr.onreadystatechange = function() {
 				if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
 					let response = xhr.responseText;
 
@@ -54,32 +85,35 @@ html
 					next(response)
 				}
 			}
+			//发送请求
+			xhr.send(formData);
 		}
-
 	</script>
 </body>
 </html>
 ```
-nodeJs
+node接口实现 `http://dev.example.com/upload-image`
 
 ```
-var express = require('express');
-var app     = express();
+var express    = require('express');
+var fileUpload = require('express-fileupload');
+var app        = express();
 
-var resData = {
-	status: 1,
-	data: 'Hi, this is uncle-yang.'
-}
+// file
+app.use(fileUpload());
+// 静态资源
+app.use(express.static('upload-file'));
 
-// 配置cros
-app.all('/get-name', function(req, res, next) {
+/**
+ * 配置cros
+ * 需要路由声明之前执行
+ */  
+app.all('*', function(req, res, next) {
 	//来访的域名
 	let origin   = req.headers.origin;
 	// 允许访问的白名单
 	let whitelist = [
 		'http://dev.test.com',
-		'http://dev.test2.com',
-		'http://dev.test3.com',
 	];
 
 	// 判断是否在名单内
@@ -93,6 +127,34 @@ app.all('/get-name', function(req, res, next) {
 	res.header('X-Powered-By','none')  
 
 	next();
+});
+
+// 正常请求
+app.post('/upload-image', function(req, res){
+	let data = {
+		status: 0,
+		mes: "没有获取到文件",
+	}
+
+	if(!req.files){
+		res.json(data);
+
+		return;
+	}
+
+	// 获取到上传的文件
+	let image = req.files.image;
+
+	// 把文件存到本地
+	image.mv(`./upload-file/${image.name}`, function(){
+
+		res.json({
+			status: 1,
+			data: `http://dev.example.com/${image.name}`,
+		})
+
+	});
+
 });
 
 // start server

@@ -30,9 +30,12 @@
 * 轻量速成(简单配置就可满足你的欲望)
     * [jsonp](./jsonp.md)
     * [CORS](./cors.md)
-    * [nginx 代理](./nginx.md)
+    * [nginx-proxy](./nginx-proxy.md)
+    * [server-proxy](./server-proxy.md)
 * 小复杂
-    * [iframe + postMessage](./iframe-postmessage.md)
+    * [iframe-postMessage](./iframe-postmessage.md)
+    * [iframe-window.name](./server-proxy.md)
+    * [iframe-window.domin](./server-proxy.md)
 * 跨域上传文件
-    * [CORS](./cors-upload.md)
-    * [iframe + postMessage](./iframe-postmessage-upload.md)
+    * [CORS-upload](./cors-upload.md)
+    * [iframe-form-postMessage-upload](./iframe-form-postMessage-upload.md)

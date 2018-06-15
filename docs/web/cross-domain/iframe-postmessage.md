@@ -164,3 +164,6 @@
     * ie8+才支持，而且ie8+<ie10只支持iframe的方式
 * 优点
     * 支持各个类型的请求
+* 适用场景
+	* 任性不兼容低版本浏览器
+	* 当前模式不支持上传文件，如需有上传文件的需求，请看[iframe-form-postMessage-upload](./iframe-form-postMessage-upload.md)

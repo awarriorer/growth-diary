@@ -36,3 +36,5 @@ ENTRYPOINT []
 #CMD nginx && node ./server.js
 
 CMD node ./server.js
+
+

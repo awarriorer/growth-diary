@@ -5,7 +5,7 @@ var app     = express();
 app.use(express.static('dist'));
 
 // start server
-var server = app.listen(5678, function(){
+var server = app.listen(8009, function(){
 	var host = server.address().address;
   	var port = server.address().port;
 

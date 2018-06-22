@@ -6,7 +6,7 @@
 # TO_RUN:         docker run -P cc/deal-admin-server
 
 # Latest Ubuntu LTS
-FROM mhart/alpine-node:6.12.0
+FROM mhart/alpine-node:8.11.3
 
 # Install cnpm
 RUN npm config set unsafe-perm true

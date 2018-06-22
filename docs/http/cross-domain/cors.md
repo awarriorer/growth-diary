@@ -3,8 +3,9 @@
 这是个相对较新，且比较省力的一个跨域方案。不会说话的我，直接用代码演示
 CORS，跨域资源共享(Cross-origin resource sharing)
 
-html
-```
+http://dev.test.com/cros.html
+``` html
+<!-- cros.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,9 +61,11 @@ html
 </body>
 </html>
 ```
-nodeJs
 
-```
+http://dev.example.com node server.js
+
+
+``` js
 var express = require('express');
 var app     = express();
 
@@ -78,8 +81,6 @@ app.all('/get-name', function(req, res, next) {
 	// 允许访问的白名单
 	let whitelist = [
 		'http://dev.test.com',
-		'http://dev.test2.com',
-		'http://dev.test3.com',
 	];
 
 	// 判断是否在名单内

@@ -3,8 +3,8 @@
 原理：静态资源(css,image,js)不受浏览器同源策略束缚
 本着能动手就别吵吵的原则，直接坐代码演示
 
-HTML
-```
+http://dev.test.com/jsonp.html
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@ HTML
 			let but = document.querySelector("#but");
 
 			but.onclick = function(){
-				createJsonp('http://127.0.0.1:3500/jsonp', function(res){
+				createJsonp('http://dev.example.com/jsonp', function(res){
 					console.log('jsonp响应...');
 					console.log(res.data);
 				})
@@ -73,9 +73,8 @@ HTML
 </body>
 </html>
 ```
-
-node server
-```
+http://dev.example.com node server.js
+``` js
 var express = require('express');
 var app     = express();
 
@@ -99,10 +98,10 @@ var server = app.listen(3500, function(){
 
 #### 现象
 点击请求按钮后，控制台打印出 ```Hi, this is uncle-yang.```
-![打印日志](../../../images/web/cross-domain/jsonp-1.png)
+![打印日志](../../images/web/cross-domain/jsonp-1.png)
 
 #### jsonp 这个请求返回了什么？
-```
+``` js
 /**/ typeof jsonpBack1 === 'function' && jsonpBack1({status: 1, data: "Hi, this is uncle-yang."});
 ```
 检查查询参数callback的回调函数名称是否是一个函数，如果是函数，那么执行，且把数据传到jsonpBack1中

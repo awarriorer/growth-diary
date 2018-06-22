@@ -3,8 +3,8 @@
 原理：postMessage可以与任意域名之间通信(只要能通信了，其他的就都是浮云了),  
 类似一个代理，A域名不能直接访问B域名的接口，于是B给A派了一个小弟(pageC.html页面)，然后跟A说，你可以通过快递小哥(postMessage)把你的请求告诉我小弟，然后我小弟会把你想要的结果快递给你~
 
-代码：`http://dev.test.com/post-message.html`
-```
+http://dev.test.com/post-message.html
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,9 +82,9 @@
 </html>
 ```
 
-代码：`http://dev.example.com/iframe-postMessage`
+http://dev.example.com/iframe-postMessage.html
 
-```
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,8 +100,6 @@
 				// 允许访问的白名单
 				let whitelist = [
 					'http://dev.test.com',
-					'http://dev.test2.com',
-					'http://dev.test3.com',
 				];
 
 				if(whitelist.indexOf(origin) == -1){

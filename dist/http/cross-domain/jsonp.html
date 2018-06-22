@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>日常跨域解决方案之(jsonp) | 知识归纳</title>
+    <meta name="description" content="架构师的路上……">
+    <link rel="icon" href="/images/icon/uncle.ico">
+    
+    <link rel="preload" href="/assets/css/7.styles.7753f020.css" as="style"><link rel="preload" href="/assets/js/app.8aed1688.js" as="script"><link rel="preload" href="/assets/js/2.9cefcf91.js" as="script"><link rel="prefetch" href="/assets/js/4.18e242f4.js"><link rel="prefetch" href="/assets/js/0.d158d61c.js"><link rel="prefetch" href="/assets/js/1.5414fd8f.js"><link rel="prefetch" href="/assets/js/3.27c28b33.js"><link rel="prefetch" href="/assets/js/5.b1a110ff.js"><link rel="prefetch" href="/assets/js/6.7c064667.js">
+    <link rel="stylesheet" href="/assets/css/7.styles.7753f020.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      知识归纳
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><!----></div></header><div class="sidebar-mask"></div><div class="sidebar"><!----><!----></div><div class="page"><div class="content"><h3 id="日常跨域解决方案之-jsonp"><a href="#日常跨域解决方案之-jsonp" aria-hidden="true" class="header-anchor">#</a> 日常跨域解决方案之(jsonp)</h3><p>原理：静态资源(css,image,js)不受浏览器同源策略束缚
+本着能动手就别吵吵的原则，直接坐代码演示</p><p>HTML</p><div class="language- extra-class"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;jsonp示例&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;button id=&quot;but&quot;&gt;执行jsonp请求&lt;/button&gt;
+	
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		window.onload = () =&gt;{
+			let but = document.querySelector(&quot;#but&quot;);
+
+			but.onclick = function(){
+				createJsonp('http://127.0.0.1:3500/jsonp', function(res){
+					console.log('jsonp响应...');
+					console.log(res.data);
+				})
+			}
+		}
+
+		// 初始化请求个数
+		window.requestIndex = 0;
+
+		// 创建一个jsonp请求
+		function createJsonp(url, next){
+
+			// 请求次数自增，避免下次请求时回调执行絮乱
+			requestIndex++;
+
+			let funName = 'jsonpBack' + requestIndex;
+			let reqUrl  = url + '?callback=' + funName;
+
+			// 定义回调名称
+			window[funName] = function(res){
+				// 执行回调
+				next(res);
+				// 删除已经当前执行过的script
+				removeScript(funName);
+			}
+
+			// 创建标签
+			createScript(reqUrl, funName);
+
+			// 创建script标签
+			function createScript(requestUrl, id){
+				let script = document.createElement('script');
+
+				script.type = 'text/javascript';
+				script.src  = requestUrl;
+				script.id   = id;
+
+				// 追加元素
+				document.head.appendChild(script);
+			}
+
+			// 删除script 标签
+			function removeScript(id){
+				let script = document.querySelector('#' + id);
+
+				document.head.removeChild(script);
+			}
+
+		}
+	&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><p>node server</p><div class="language- extra-class"><pre class="language-text"><code>var express = require('express');
+var app     = express();
+
+var resData = {
+	status: 1,
+	data: 'Hi, this is uncle-yang.'
+}
+
+app.get('/jsonp', function(req, res){
+	res.jsonp(resData);
+});
+
+// start server
+var server = app.listen(3500, function(){
+	var host = server.address().address;
+  	var port = server.address().port;
+
+	console.log('Example app listening at http://%s:%s', host, port);
+})
+</code></pre></div><h4 id="现象"><a href="#现象" aria-hidden="true" class="header-anchor">#</a> 现象</h4><p>点击请求按钮后，控制台打印出 <code>Hi, this is uncle-yang.</code><img src="/assets/img/jsonp-1.2861a8db.png" alt="打印日志"></p><h4 id="jsonp-这个请求返回了什么？"><a href="#jsonp-这个请求返回了什么？" aria-hidden="true" class="header-anchor">#</a> jsonp 这个请求返回了什么？</h4><div class="language- extra-class"><pre class="language-text"><code>/**/ typeof jsonpBack1 === 'function' &amp;&amp; jsonpBack1({status: 1, data: &quot;Hi, this is uncle-yang.&quot;});
+</code></pre></div><p>检查查询参数callback的回调函数名称是否是一个函数，如果是函数，那么执行，且把数据传到jsonpBack1中</p><h4 id="小结"><a href="#小结" aria-hidden="true" class="header-anchor">#</a> 小结</h4><ul><li>本质
+<ul><li>动态创建script标签，请求地址就是其src,服务器会返回一个js文件，里面执行了传递了结果的callback回调函数</li><li>jsonp 只是一种 &quot;使用模式&quot;,请求手段，或者说是一个解决方案</li></ul></li><li>缺点
+<ul><li>因为是本质是script，所以只支持get请求，所以请求大小受限制</li></ul></li><li>优点
+<ul><li>兼容性良好</li></ul></li></ul></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
+    <script src="/assets/js/2.9cefcf91.js" defer></script><script src="/assets/js/app.8aed1688.js" defer></script>
+  </body>
+</html>

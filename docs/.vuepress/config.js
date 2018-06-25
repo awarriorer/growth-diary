@@ -2,7 +2,7 @@ module.exports = {
     title: '知识归纳',
     description: '架构师的路上……',
     head: [
-      ['link', { rel: 'icon', href: '../images/icon/uncle.ico' }]
+      ['link', { rel: 'icon', href: 'http://www.uncle-yang.com/pc/image/icon/uncle.ico' }]
     ],
     markdown: {
       lineNumbers: true
@@ -21,11 +21,7 @@ module.exports = {
           children: [
             '/http/cross-domain/',
           ]
-        },
-        // {
-        //   title: 'Group 2',
-        //   children: [ /* ... */ ]
-        // }
+        }
       ]
     }
   }

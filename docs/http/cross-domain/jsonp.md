@@ -96,10 +96,6 @@ var server = app.listen(3500, function(){
 })
 ```
 
-#### 现象
-点击请求按钮后，控制台打印出 ```Hi, this is uncle-yang.```
-![打印日志](../../images/web/cross-domain/jsonp-1.png)
-
 #### jsonp 这个请求返回了什么？
 ``` js
 /**/ typeof jsonpBack1 === 'function' && jsonpBack1({status: 1, data: "Hi, this is uncle-yang."});

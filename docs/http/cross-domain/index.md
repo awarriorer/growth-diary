@@ -27,6 +27,7 @@
 虽然你没车没房还没有钱，但是别气馁，最起码你的判断是对的！但是你始终对那个姑娘念念不忘(业务需求,且产品经理的子弹已经上膛)，于是姑娘说:"只要你活儿好，技能比腰间盘更突出，我可以给你个机会！"
 
 #### c 有哪些方案(小伙儿可以学习哪些技巧)？
+所有demo的源码，请访问[https://github.com/awarriorer/cross-domin.git](https://github.com/awarriorer/cross-domin.git)
 * 轻量速成(简单配置就可满足你的欲望)
     * [jsonp](./jsonp.md)
     * [CORS](./cors.md)
@@ -35,7 +36,7 @@
 * 小复杂
     * [iframe-postMessage](./iframe-postmessage.md)
     * [iframe-window.name](./iframe-window-name.md)
-    * [iframe-window.domin](./server-proxy.md)
+    <!-- * [iframe-window.domin](./server-proxy.md) -->
 * 跨域上传文件
     * [CORS-upload](./cors-upload.md)
     * [iframe-form-postMessage-upload](./iframe-form-postMessage-upload.md)

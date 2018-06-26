@@ -129,7 +129,7 @@ var server = app.listen(3500, function(){
 	console.log('Example app listening at http://%s:%s', host, port);
 })
 ```
-http://dev.example.com/ node iframe-window-name.ejs
+http://dev.example.com iframe-window-name.ejs
 
 ``` html
 <!DOCTYPE html>

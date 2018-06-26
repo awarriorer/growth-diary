@@ -251,7 +251,7 @@ var server = app.listen(3500, function(){
 })
 ```
 
-http://dev.example.com/ node upload-post-message.ejs
+http://dev.example.com upload-post-message.ejs
 
 ``` html
 <!DOCTYPE html>

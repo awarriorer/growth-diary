@@ -34,7 +34,7 @@
     * [server-proxy](./server-proxy.md)
 * 小复杂
     * [iframe-postMessage](./iframe-postmessage.md)
-    * [iframe-window.name](./server-proxy.md)
+    * [iframe-window.name](./iframe-window-name.md)
     * [iframe-window.domin](./server-proxy.md)
 * 跨域上传文件
     * [CORS-upload](./cors-upload.md)

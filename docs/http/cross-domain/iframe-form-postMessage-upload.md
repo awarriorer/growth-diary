@@ -261,14 +261,14 @@ http://dev.example.com/ node upload-post-message.ejs
 	<title>upload-post-message</title>
 
 	<script type="text/javascript">
-		let renderData = <%- data%>
+		let renderData = '<%- data%>';
 	</script>
 </head>
 <body>
 	<script type="text/javascript">
 		window.onload = () =>{
 			// 把数据广播出去
-			window.parent.postMessage(JSON.stringify(renderData), '*');
+			window.parent.postMessage(renderData, '*');
 		}
 
 	</script>
@@ -285,10 +285,9 @@ http://dev.example.com/ node upload-post-message.ejs
     * 服务器接受到请求后，通过一个页面以postMessage的方式作为请求的相应
     * 这里只是用了postMessage作为消息载体，更换载体实现也能实现相同的需求
 * 缺点
-    * 上传文件，拿不到上传进度
     * 前后端都需要做适配，约定回调函数字段名
+    * 上传文件，拿不到上传进度
 * 优点
     * 
 * 适用场景
 	* 任性不兼容低版本浏览器
-	* 当前模式不支持上传文件，如需有上传文件的需求，请看[iframe-form-postMessage-upload](./iframe-form-postMessage-upload.md)

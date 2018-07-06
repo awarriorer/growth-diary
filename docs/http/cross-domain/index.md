@@ -40,3 +40,5 @@
 * 跨域上传文件
     * [CORS-upload](./cors-upload.md)
     * [iframe-form-postMessage-upload](./iframe-form-postMessage-upload.md)
+
+#### [跨域方案小结](./conclusion.md)

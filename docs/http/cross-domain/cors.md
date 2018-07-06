@@ -24,7 +24,7 @@ http://dev.test.com/cors.html
 			but.onclick = function(e){
 				let options = {
 					methods: 'get',
-					url: 'http://dev.cros.com/get-name',
+					url: 'http://dev.example.com/get-name',
 				};
 
 				request(options, function(res){

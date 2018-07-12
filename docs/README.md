@@ -8,6 +8,7 @@
     * 什么又是https？
     * 浏览器缓存策略
     * 浏览器请求限制，同源策略？并发量
+    * websocket协议是怎样的？
     * [跨域解决方案](./http/cross-domain/index.md)
     * 代理和反向代理
     * 关于抓包以及日常Http调试

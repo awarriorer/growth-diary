@@ -1,4 +1,5 @@
 ### 日常跨域解决方案之(iframe-form-postMessage-upload)
+-------
 
 原理：
 
@@ -278,7 +279,7 @@ http://dev.example.com upload-post-message.ejs
 ```
 
 
-#### 小结
+### 小结
 
 * 本质
     * from的action=iframe的name,iframe没有跨域限制 

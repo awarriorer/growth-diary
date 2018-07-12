@@ -1,4 +1,5 @@
 ### 日常跨域解决方案之(jsonp)
+-------
 
 原理：静态资源(css,image,js)不受浏览器同源策略束缚
 本着能动手就别吵吵的原则，直接坐代码演示
@@ -96,7 +97,7 @@ var server = app.listen(3500, function(){
 })
 ```
 
-#### jsonp 这个请求返回了什么？
+### jsonp 这个请求返回了什么？
 ``` js
 /**/ typeof jsonpBack1 === 'function' && jsonpBack1({status: 1, data: "Hi, this is uncle-yang."});
 ```

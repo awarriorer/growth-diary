@@ -20,6 +20,8 @@ module.exports = {
           collapsable: false,
           children: [
             '/http/cross-domain/',
+            '/http/request-life',
+            '/http/request-content',
           ]
         }
       ]

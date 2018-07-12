@@ -1,4 +1,5 @@
 ### 日常跨域解决方案之(iframe-window.name)
+-------
 
 原理：
 
@@ -151,7 +152,7 @@ http://dev.example.com iframe-window-name.ejs
 </html>
 ```
 
-#### 小结
+### 小结
 
 * 本质
     * 动态创建iframe标签，请求地址就是其src,服务器会返回一个html文件，html中把window.name的值设置成请求结果，然后，再把iframe的src改成本域下的一个空页面，从而可以拿到window.name的值，也就是请求结果

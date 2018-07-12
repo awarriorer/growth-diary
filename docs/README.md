@@ -4,7 +4,7 @@
 ##### 基础
 * HTTP
     * [一个请求都经历了些什么？](./http/request-life.md)
-    * 一个请求中都包含了什么？
+    * [一个请求中都包含了什么？](./http/request-content.md)
     * 什么又是https？
     * 浏览器缓存策略
     * 浏览器请求限制，同源策略？并发量
@@ -13,7 +13,7 @@
     * 代理和反向代理
     * 关于抓包以及日常Http调试
     * 前端Api架构设计的一些见解
-    * 后端Api架构设计的一些见解
+    * [后端Api架构设计的一些见解](./http/api-server-architecture.md)
     * 针对http的前端性能优化
 
 * HTMl

@@ -6,7 +6,7 @@
     * [一个请求都经历了些什么？](./http/request-life.md)
     * [一个请求中都包含了什么？](./http/request-content.md)
     * 什么又是https？
-    * 浏览器缓存策略
+    * [浏览器缓存策略](./http/browser-cache.md)
     * 浏览器请求限制，同源策略？并发量
     * websocket协议是怎样的？
     * [跨域解决方案](./http/cross-domain/index.md)

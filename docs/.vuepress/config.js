@@ -19,9 +19,9 @@ module.exports = {
           title: 'http',
           collapsable: false,
           children: [
-            '/http/cross-domain/',
             '/http/request-life',
             '/http/request-content',
+            '/http/cross-domain/',
           ]
         }
       ]

@@ -12,8 +12,7 @@
     * [跨域解决方案](./http/cross-domain/index.md)
     * 代理和反向代理
     * 关于抓包以及日常Http调试
-    * 前端Api架构设计的一些见解
-    * [后端Api架构设计的一些见解](./http/api-server-architecture.md)
+    * [Api设计的一些见解](./http/api-architecture.md)
     * 针对http的前端性能优化
 
 * HTMl

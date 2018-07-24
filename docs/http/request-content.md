@@ -142,7 +142,7 @@
 * Date (Response)
     * 说明: 消息生成的日期和时间
     * 默认值: 无
-    * 数据类型: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+    * 数据类型: `<day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT`
 
 * ETag (Response)
     * 说明: 资源的特定版本的标识符。这可以让缓存更高效，并节省带宽，因为如果内容没有改变，Web服务器不需要发送完整的响应。而如果内容发生了变化，使用ETag有助于防止资源的同时更新相互覆盖
@@ -157,7 +157,7 @@
 * set-cookie (Response)
     * 说明: 服务器端向客户端发送 cookie
     * 默认值: 无
-    * 数据类型: <cookie-name>=<cookie-value>; Expires=<date>
+    * 数据类型: `<cookie-name>=<cookie-value>; Expires=<date>`
 
 * Vary (Response)
     * 说明: 一脸懵逼

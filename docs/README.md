@@ -7,7 +7,7 @@
     * [一个请求中都包含了什么？](./http/request-content.md)
     * [浏览器缓存](./http/browser-cache.md)
     * websocket协议是怎样的？
-    * 浏览器请求限制，同源策略？并发量    
+    * [浏览器请求限制](./http/request-limit.md)
     * [跨域解决方案](./http/cross-domain/index.md)
     * 什么又是https？
     * 代理和反向代理

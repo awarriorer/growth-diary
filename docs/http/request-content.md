@@ -1,7 +1,8 @@
 ### 一个请求中都包含了什么？
 -------
-
+123
 ### General (请求概览信息)
+
 * Request URL
     * 说明: 请求地址
     * 默认值: 无
@@ -135,7 +136,7 @@
     * 说明: 指定浏览器的缓存机制
     * 默认值: 无
     * 数据类型: String
-    * 可选参数: max-age=<seconds>, max-stale[=<seconds>], min-fresh=<seconds>, no-cache, no-store, no-transform, only-if-cached,
+    * 可选参数: `max-age=<seconds>, max-stale[=<seconds>], min-fresh=<seconds>, no-cache, no-store, no-transform, only-if-cached`,
     * 备注：[浏览器缓存策略](./browser-cache.md)
 
 * Date (Response)
@@ -173,4 +174,4 @@
 * 请求头: 大爷(服务器):我是谁，从哪儿来，需要的数据压缩方式和数据格式
 * 响应头: 小子(客户机):是否被允许，响应时间，你可以存一份，我要在你身上写点儿东西，我是啥服务
 * 请求体: 大爷(服务器)请笑纳
-* 响应体: 小子(客户机):这是你想要的，赶紧滚 -->
+* 响应体: 小子(客户机):这是你想要的，赶紧滚

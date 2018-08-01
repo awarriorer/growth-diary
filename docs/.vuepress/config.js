@@ -21,6 +21,7 @@ module.exports = {
           children: [
             '/http/request-life',
             '/http/request-content',
+            '/http/browser-cache',
             '/http/cross-domain/',
           ]
         }

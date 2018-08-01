@@ -73,8 +73,8 @@ Expires: -1
     * no-cache: 在释放缓存副本之前，强制高速缓存将请求提交给原始服务器进行验证。每次请求都要去验证缓存是否可用
     * only-if-cached: 
 * 到期
-    * max-age=<seconds>:设置缓存存储的最大周期，超过这个时间缓存被认为过期(单位秒)。与Expires相反，时间是相对于请求的时间。
-    * s-maxage=<seconds>:覆盖max-age 或者 Expires 头，但是仅适用于共享缓存(比如各个代理)，并且私有缓存中它被忽略。
+    * max-age=`<seconds>`:设置缓存存储的最大周期，超过这个时间缓存被认为过期(单位秒)。与Expires相反，时间是相对于请求的时间。
+    * s-maxage=`<seconds>`:覆盖max-age 或者 Expires 头，但是仅适用于共享缓存(比如各个代理)，并且私有缓存中它被忽略。
 * 重新验证和重新加载
     * must-revalidate: 缓存必须在使用之前验证旧资源的状态，并且不可使用过期资源。
     * proxy-revalidate: 与must-revalidate作用相同，但它仅适用于共享缓存（例如代理），并被私有缓存忽略

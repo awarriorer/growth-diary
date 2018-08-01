@@ -62,7 +62,7 @@ Expires: -1
 
 ::: warning
 服务器时间和客户机时间可能存在偏差，所以只建议在长时间不会变化的文件下使用。所以这是个bug
-
+:::
 
 #### Cache-Control
 这个家伙是为了补丁，为了弥补上面 Expires 的bug。如果在Cache-Control响应头设置了 "max-age" 或者 "s-max-age" 指令，那么 Expires 头会被忽略。
@@ -82,6 +82,7 @@ Expires: -1
     * no-store: 禁止缓存，不存储有关客户端请求或服务器响应的任何内容
 
 
-#### 关于更多http缓存知识
+#### 相关链接
 
 * [谷歌http缓存详解](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching) 
+* [mozilla-Cache-Control](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control)

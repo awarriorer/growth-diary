@@ -45,3 +45,11 @@ header在http中是没有最大限制的，但是服务层会有限制。特别�
 
 #### 安全限制
 * 同源策略，XMLHttpRequest不允许请求本域外的地址。跨域的主要原因，[跨域方案,了解一下](./cross-domain/index.md)。
+
+#### 最后，按照惯例，吐槽一下浏览器
+![浏览器1](./images/browser-4.gif)
+![浏览器1](./images/browser-2.jpg)
+
+![浏览器1](./images/browser-1.jpg)
+![浏览器1](./images/browser-3.jpg)
+

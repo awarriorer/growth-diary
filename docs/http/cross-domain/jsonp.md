@@ -2,7 +2,7 @@
 -------
 
 原理：静态资源(css,image,js)不受浏览器同源策略束缚
-本着能动手就别吵吵的原则，直接坐代码演示
+本着能动手就别吵吵的原则，直接做代码演示
 
 http://dev.test.com/jsonp.html
 ``` html
@@ -99,9 +99,17 @@ var server = app.listen(3500, function(){
 
 ### jsonp 这个请求返回了什么？
 ``` js
-/**/ typeof jsonpBack1 === 'function' && jsonpBack1({status: 1, data: "Hi, this is uncle-yang."});
+/**/ 
+typeof jsonpBack1 === 'function' && jsonpBack1({
+	status: 1, 
+	data: "Hi, this is uncle-yang."
+});
 ```
 检查查询参数callback的回调函数名称是否是一个函数，如果是函数，那么执行，且把数据传到jsonpBack1中
+
+::: warning
+注意:一般jsonp的请求库的默认回调函数命名是`callBack=callBack_${index}`，且index的值是在实例内部进行累计。所以如果一个项目中的用到了多个jsonp的实例，可能会造成callBack执行错乱。所以可以对 clallBack=${baseName} 进行设置，从而使多个jsonp的实例共存。
+:::
 
 #### 小结
 

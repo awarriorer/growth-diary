@@ -1,7 +1,7 @@
 ### 日常跨域解决方案之(CROS)
 -------
 
-这是个相对较新，且比较省力的一个跨域方案。不会说话的我，直接用代码演示
+这是个相对较新，且比较省力的一个跨域方案。直接用代码演示
 CORS，跨域资源共享(Cross-origin resource sharing)
 
 http://dev.test.com/cors.html
@@ -104,6 +104,10 @@ var server = app.listen(3500, function(){
 	console.log('Example app listening at http://%s:%s', host, port);
 })
 ```
+
+::: tip
+在发出非get请求时，浏览器会先对服务器发起一次预检测，询问服务器，当前的是否知识该请求类型的跨域
+:::
 
 ### 小结
 

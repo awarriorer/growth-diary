@@ -22,6 +22,7 @@ module.exports = {
             '/http/request-life',
             '/http/request-content',
             '/http/browser-cache',
+            '/http/request-limit.md',
             '/http/cross-domain/',
           ]
         }

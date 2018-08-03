@@ -1,17 +1,17 @@
 ### 千里之行，始于足下
 #### 努力一点，生活更美好...
 
-##### 基础
+#### 基础
 * HTTP
     * [一个请求都经历了些什么？](./http/request-life.md)
     * [一个请求中都包含了什么？](./http/request-content.md)
     * [浏览器缓存](./http/browser-cache.md)
-    * websocket协议是怎样的？
     * [浏览器请求限制](./http/request-limit.md)
     * [跨域解决方案](./http/cross-domain/index.md)
-    * 什么又是https？
-    * 代理和反向代理
     * 关于抓包以及日常Http调试
+    * 代理和反向代理
+    * 什么又是https？
+    * websocket协议是怎样的？
     * [Api设计的一些见解](./http/api-architecture.md)
     * 针对http的前端性能优化
 
@@ -60,7 +60,7 @@
     * 关于dom事件触发机制
     * 关于异步编程
     
-##### 前端框架
+#### 前端框架
 * vue
     * new vue()时内部都做了什么？
     * data的双向数据绑定是如何实现的？

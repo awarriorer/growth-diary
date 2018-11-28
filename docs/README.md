@@ -12,6 +12,7 @@
     * 代理和反向代理
     * 什么又是https？
     * websocket协议是怎样的？
+    * http成长史(./http/http-history.md)
     * [Api设计的一些见解](./http/api-architecture.md)
     * 针对http的前端性能优化
 
@@ -62,7 +63,7 @@
     
 #### 前端框架
 * vue
-    * new vue()时内部都做了什么？
+    * new vue()时内部都做了什么(实例化流程)？
     * data的双向数据绑定是如何实现的？
     * computed是怎么实现的？
     * watch是怎么实现的？
@@ -75,7 +76,15 @@
     * 全局api
     * 指令是怎么实现的？
     * user 插件的原理
+    * vue单元测试
 
-* 关于promise的实现
-* 关于async的实现
-* 关于EventEmitter发送机制的实现
+#### 构建工具
+* webpack
+* grunt
+* gulp
+
+#### 单元测试
+* Jasmine-APi
+* 测试静态文件
+* 测试模块
+* 测试vue组件

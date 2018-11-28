@@ -26,6 +26,7 @@ module.exports = {
             '/http/cross-domain/',
           ]
         }
-      ]
+      ],
+      lastUpdated: '上次更新',
     }
   }

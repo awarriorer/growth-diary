@@ -13,7 +13,7 @@ RUN npm config set unsafe-perm true
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 # 把项目复制进容器
-COPY . /home/my-blog/
+COPY -a . /home/my-blog/
 
 # 安装依赖包
 RUN cd /home/my-blog/ && \

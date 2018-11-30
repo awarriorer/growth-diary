@@ -8,13 +8,14 @@
     * [浏览器缓存](./http/browser-cache.md)
     * [浏览器请求限制](./http/request-limit.md)
     * [跨域解决方案](./http/cross-domain/index.md)
-    * 关于抓包以及日常Http调试
+    * 关于抓包以及日常HTTP调试
     * 代理和反向代理
-    * 什么又是https？
+    * 什么又是HTTPS？
     * websocket协议是怎样的？
-    * http成长史(./http/http-history.md)
+    * [HTTP简要成长史](./http/http-history.md)
     * [Api设计的一些见解](./http/api-architecture.md)
-    * 针对http的前端性能优化
+    * HTTP前端性能优化
+    * 关于HTTP的一些问题
 
 * HTMl
     * 浏览器拿到htm后，都做了什么？

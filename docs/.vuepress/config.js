@@ -24,8 +24,12 @@ module.exports = {
             '/http/browser-cache',
             '/http/request-limit.md',
             '/http/cross-domain/',
+            '/http/about-proxy.md',
+            '/http/about-https.md',
+            '/http/webSocket.md',
             '/http/http-history',
             '/http/api-architecture',
+            '/http/http-optimization.md',
           ]
         }
       ],

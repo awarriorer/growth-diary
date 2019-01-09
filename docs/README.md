@@ -8,14 +8,14 @@
     * [浏览器缓存](./http/browser-cache.md)
     * [浏览器请求限制](./http/request-limit.md)
     * [跨域解决方案](./http/cross-domain/index.md)
-    * 关于抓包以及日常HTTP调试
-    * 代理和反向代理
-    * 什么又是HTTPS？
-    * websocket协议是怎样的？
+    <!-- * 关于抓包以及日常HTTP调试 -->
+    * [代理和反向代理](./http/about-proxy.md)
+    * [什么又是HTTPS？](./http/about-https.md)
+    * [关于websocket？](./http/webSocket.md)
     * [HTTP简要成长史](./http/http-history.md)
     * [Api设计的一些见解](./http/api-architecture.md)
-    * HTTP前端性能优化
-    * 关于HTTP的一些问题
+    * [HTTP前端性能优化](./http/http-optimization.md)
+    <!-- * 关于HTTP的一些问题 -->
 
 * HTMl
     * 浏览器拿到htm后，都做了什么？
@@ -31,41 +31,55 @@
     * css常见布局及实现？
     * css模态框
     * 关于flex布局
-    * sass常用语法
     * less常用语法
+    * sass常用语法
 
 * Js 基础
-    * Array, 
-    * Boolean, 
-    * Date, 
-    * Error, 
-    * Function, 
-    * JSON, 
-    * Math, 
-    * Number, 
-    * Object, 
-    * RegExp, 
+    * 语句
+    * 数据类型
     * String, 
-    * Map, 
-    * Set, 
+    * Boolean, 
+    * Number,
+    * Object, 
+    * Array, 
+    * Date, 
+    * RegExp, 
+    * Function, 
+    * Math, 
+    * Error 
+    * JSON,
+    * Map
+    * Set 
     * WeakMap,
     * WeakSet
-    * 事件绑定的几种方式
+    * BOM
+    * DOM
+    * 事件
+    * Ajac&comet
+    * cookie&storage
+    * File API
+    * new API
+    * global API
     * js脑图
 
 * Js 进阶
     * 严格模式
-    * 继承和原型链
+    * 闭包，继承和原型链
     * 内存机制
     * 并发模型以及事件循环
-    * 日常用到的设计模式
-    * 关于dom事件触发机制
+    * 日常设计模式
+    * 关于dom事件机制
     * 关于异步编程
+        * promise的实现
+        * async await的实现
+        * node async的实现
     
 #### 前端框架
-* vue
-    * new vue()时内部都做了什么(实例化流程)？
-    * data的双向数据绑定是如何实现的？
+* vue (v2.5.0)
+    * new vue()时都发生了什么
+    <!-- * [源码分析前的准备](./vue-analysis/vue-ready.md) -->
+    <!-- * [源码分析:new vue()时都发生了什么](./vue-analysis/vue-ready.md) -->
+    * 源码分析:data的双向数据绑定是如何实现的？
     * computed是怎么实现的？
     * watch是怎么实现的？
     * 模板编译都经历了那些什么？
@@ -79,13 +93,15 @@
     * user 插件的原理
     * vue单元测试
 
-#### 构建工具
-* webpack
+#### 开发&构建工具
 * grunt
 * gulp
+* webpack
+* typeScript
+* flow.js
 
 #### 单元测试
-* Jasmine-APi
+* Jasmine
 * 测试静态文件
 * 测试模块
 * 测试vue组件

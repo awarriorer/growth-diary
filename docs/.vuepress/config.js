@@ -29,7 +29,15 @@ module.exports = {
             '/http/webSocket.md',
             '/http/http-history',
             '/http/api-architecture',
-            '/http/http-optimization.md',
+            '/http/http-optimization.md'
+          ]
+        },
+        {
+          title: 'html',
+          collapsable: false,
+          children: [
+            '/html/browser-render.md',
+            // '/html/seo.md'
           ]
         }
       ],

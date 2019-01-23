@@ -37,9 +37,17 @@ module.exports = {
           collapsable: false,
           children: [
             '/html/browser-render.md',
-            // '/html/seo.md'
+            '/html/seo.md',
+            '/html/meta.md',
           ]
-        }
+        },
+        {
+          title: 'css',
+          collapsable: false,
+          children: [
+            '/style/layout-center.md',
+          ]
+        },
       ],
       lastUpdated: '上次更新',
     }

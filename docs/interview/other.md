@@ -19,3 +19,18 @@
 * js继承都有哪些方式？
 * vue有哪些内置组件？
 * 做过h5页面吗？html5和css3都有哪些新特性？
+
+``` js
+function Foo() {
+    var i = 0;
+    return function() {
+        console.log(i++);
+    }
+}
+ 
+var f1 = Foo(),
+    f2 = Foo();
+f1();
+f1();
+f2();
+```

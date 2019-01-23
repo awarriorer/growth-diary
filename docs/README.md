@@ -24,21 +24,22 @@
 <!-- * html4和html5到底有什么区别？-->
 <!-- * html语义化怎么体现？  -->
 * [html上的SEO](./html/seo.md)
+* [关于meta](./html/meta.md)
 
 #### Css
-* 关于居住中显示
-* 关于浮动
-* 文字两端对齐
-* css三角形
-* css常见布局及实现？
-* css模态框
+* [关于居住中显示](./style/layout-center.md)
+<!-- * 关于浮动 -->
+<!-- * 文字两端对齐 -->
+<!-- * css三角形 -->
+<!-- * css常见布局及实现 -->
+<!-- * css模态框 -->
 * 关于flex布局
 * less常用语法
 * sass常用语法
 
 #### Js 基础
-* 语句
-* 数据类型
+<!-- * 语句
+* 数据类型 -->
 * String, 
 * Boolean, 
 * Number,

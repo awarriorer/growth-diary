@@ -46,6 +46,7 @@ module.exports = {
           collapsable: false,
           children: [
             '/style/layout-center.md',
+            '/style/flex.md',
           ]
         },
       ],

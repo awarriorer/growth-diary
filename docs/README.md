@@ -33,7 +33,7 @@
 <!-- * css三角形 -->
 <!-- * css常见布局及实现 -->
 <!-- * css模态框 -->
-* 关于flex布局
+* [关于flex布局](./style/about-flex.md)
 * less常用语法
 * sass常用语法
 

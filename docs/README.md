@@ -34,8 +34,8 @@
 <!-- * css常见布局及实现 -->
 <!-- * css模态框 -->
 * [关于flex布局](./style/about-flex.md)
-* less常用语法
-* sass常用语法
+* [Less常用语法](./style/less.md)
+* [Sass常用语法](./style/sass.md)
 
 #### Js 基础
 <!-- * 语句

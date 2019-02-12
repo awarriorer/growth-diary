@@ -16,7 +16,7 @@ module.exports = {
       ],
       sidebar: [
         {
-          title: 'http',
+          title: 'HTTP',
           collapsable: false,
           children: [
             '/http/request-life',
@@ -33,7 +33,7 @@ module.exports = {
           ]
         },
         {
-          title: 'html',
+          title: 'HTML',
           collapsable: false,
           children: [
             '/html/browser-render.md',
@@ -42,13 +42,20 @@ module.exports = {
           ]
         },
         {
-          title: 'css',
+          title: 'CSS',
           collapsable: false,
           children: [
             '/style/layout-center.md',
             '/style/flex.md',
             '/style/less.md',
             '/style/sass.md',
+          ]
+        },
+        {
+          title: 'JS基础',
+          collapsable: false,
+          children: [
+            '/js-base/string.md',
           ]
         },
       ],

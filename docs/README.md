@@ -26,7 +26,7 @@
 * [html上的SEO](./html/seo.md)
 * [关于meta](./html/meta.md)
 
-#### Css
+#### CSS
 * [关于居住中显示](./style/layout-center.md)
 <!-- * 关于浮动 -->
 <!-- * 文字两端对齐 -->
@@ -37,23 +37,23 @@
 * [Less常用语法](./style/less.md)
 * [Sass常用语法](./style/sass.md)
 
-#### Js 基础
+#### JS基础
 <!-- * 语句
 * 数据类型 -->
-* String, 
-* Boolean, 
-* Number,
-* Object, 
-* Array, 
-* Date, 
-* RegExp, 
-* Function, 
-* Math, 
+* [String](./js-base/string.md) 
+* Boolean 
+* Number
+* Object 
+* Array 
+* Date 
+* RegExp 
+* Function 
+* Math 
 * Error 
-* JSON,
+* JSON
 * Map
 * Set 
-* WeakMap,
+* WeakMap
 * WeakSet
 * BOM
 * DOM

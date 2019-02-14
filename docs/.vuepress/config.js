@@ -56,6 +56,11 @@ module.exports = {
           collapsable: false,
           children: [
             '/js-base/string.md',
+            '/js-base/boolean.md',
+            '/js-base/number.md',
+            '/js-base/object.md',
+            '/js-base/json.md',
+            '/js-base/map.md',
           ]
         },
       ],

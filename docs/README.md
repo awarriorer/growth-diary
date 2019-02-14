@@ -41,20 +41,20 @@
 <!-- * 语句
 * 数据类型 -->
 * [String](./js-base/string.md) 
-* Boolean 
-* Number
-* Object 
+* [Boolean](./js-base/boolean.md) 
+* [Number](./js-base/number.md)
+* [Object](./js-base/object.md)
 * Array 
 * Date 
 * RegExp 
 * Function 
 * Math 
 * Error 
-* JSON
-* Map
+* [JSON](./js-base/json.md) 
 * Set 
-* WeakMap
 * WeakSet
+* [Map](./js-base/map.md)
+* WeakMap
 * BOM
 * DOM
 * 事件

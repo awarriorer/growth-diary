@@ -1,4 +1,6 @@
 ### JSON
+-------
+
 window下的内置对象，JSON只有两个方法，把对象转化成json字符串，把json字符串转化成js对象。
 ``` js
 var obj = {

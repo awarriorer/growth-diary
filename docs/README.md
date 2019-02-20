@@ -44,20 +44,20 @@
 * [Boolean](./js-base/boolean.md) 
 * [Number](./js-base/number.md)
 * [Object](./js-base/object.md)
-* Array 
-* Date 
-* RegExp 
-* Function 
-* Math 
-* Error 
-* [JSON](./js-base/json.md) 
-* Set 
-* WeakSet
 * [Map](./js-base/map.md)
-* WeakMap
-* BOM
-* DOM
-* 事件
+* [WeakMap](./js-base/weakMap.md)
+* [Array](./js-base/array.md)
+* [Set](./js-base/set.md)
+* [WeakSet](./js-base/weakSet.md)
+* [Date](./js-base/date.md)
+* [RegExp](./js-base/regExp.md)
+* [Function](./js-base/function.md)
+* [Math](./js-base/math.md) 
+<!-- * Error  -->
+* [JSON](./js-base/json.md) 
+* [BOM](./js-base/bom.md) 
+* DOM & 事件
+<!-- * 事件 -->
 * Ajac&comet
 * cookie&storage
 * File API

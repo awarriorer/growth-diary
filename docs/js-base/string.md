@@ -154,11 +154,12 @@ console.log(str.slice(1)); // 'bcdefg'
 ``` js
 var str = 'abcabc';
 
-// 替换匹配到的第一个
+// 替换到的第一个
 console.log(str.replace('a', '饿了')); // '饿了bcabc'
 //替换全部
 console.log(str.replace(/a/g, '饿了')); // 饿了bc饿了bc
 
+// 匹配字符串，返回匹配到的数组结果
 console.log(str.match('a')); // ['a']
 console.log(str.match(/a/g)); // ['a', 'a']
 ```

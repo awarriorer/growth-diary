@@ -69,6 +69,8 @@ module.exports = {
             '/js-base/function.md',
             '/js-base/math.md',
             '/js-base/json.md',
+            '/js-base/bom.md',
+            '/js-base/dom.md',
           ]
         },
       ],

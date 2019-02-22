@@ -56,12 +56,15 @@
 <!-- * Error  -->
 * [JSON](./js-base/json.md) 
 * [BOM](./js-base/bom.md) 
-* DOM & 事件
+* [DOM](./js-base/dom.md)
+* Event
 <!-- * 事件 -->
 * Ajac&comet
 * cookie&storage
 * File API
 * new API
+* Promise
+* Proxy
 * global API
 * js脑图
 

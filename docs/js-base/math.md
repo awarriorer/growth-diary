@@ -31,7 +31,6 @@ console.log(Math.cos());
 // 三角函数 -- 正切, tan(x:弧度)), 对比斜
 console.log(Math.tan());
 
-
 // 最大值
 console.log(Math.max(1, 2, 3, 4, 5)); // 5
 //最小值
@@ -39,4 +38,12 @@ console.log(Math.min(1, 2, 3, 4, 5)); // 1
 
 //随机数
 console.log(Math.random()); // 返回一个0-1的随机数
+
+//次方
+console.log(Math.pow(2, 3)); //8
+
+//开平方
+console.log(Math.sqrt(9)); // 3
+//开立方
+console.log(Math.cbrt(8)); // 2
 ```

@@ -57,10 +57,10 @@
 * [JSON](./js-base/json.md) 
 * [BOM](./js-base/bom.md) 
 * [DOM](./js-base/dom.md)
-* Event
+* [Event](./js-base/event.md)
 <!-- * 事件 -->
-* Ajac&comet
-* cookie&storage
+* [Ajax](./js-base/ajax.md)
+* Cookie & Storage
 * File API
 * new API
 * Promise

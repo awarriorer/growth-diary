@@ -71,6 +71,8 @@ module.exports = {
             '/js-base/json.md',
             '/js-base/bom.md',
             '/js-base/dom.md',
+            '/js-base/event.md',
+            '/js-base/ajax.md',
           ]
         },
       ],

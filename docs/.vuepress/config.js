@@ -73,6 +73,8 @@ module.exports = {
             '/js-base/dom.md',
             '/js-base/event.md',
             '/js-base/ajax.md',
+            '/js-base/cookie-storage.md',
+            '/js-base/file.md',
           ]
         },
       ],

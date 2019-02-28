@@ -60,9 +60,9 @@
 * [Event](./js-base/event.md)
 <!-- * 事件 -->
 * [Ajax](./js-base/ajax.md)
-* Cookie & Storage
-* File API
-* new API
+* [Cookie & Storage](./js-base/cookie-storage.md)
+* [File & FileReader](./js-base/file.md)
+<!-- * new API -->
 * Promise
 * Proxy
 * global API
@@ -79,7 +79,14 @@
     * promise的实现
     * async await的实现
     * node async的实现
-    
+* 日常算法
+    * 冒泡排序
+    * 快速排序
+    * 多路归并
+    * 数组去重
+    * 动态规划
+    * 二分查找法
+    * DFS 深度优先
 ### 前端框架
 * vue (v2.5.0)
     * new vue()时都发生了什么
@@ -99,16 +106,7 @@
     * user 插件的原理
     * vue单元测试
 
-* 日常算法
-    * 冒泡排序
-    * 快速排序
-    * 多路归并
-    * 数组去重
-    * 动态规划
-    * 二分查找法
-    * DFS 深度优先
-
-### 开发&构建工具
+### 构建工具
 * grunt
 * gulp
 * webpack
@@ -121,3 +119,9 @@
 * 测试模块
 * 测试vue组件
 
+### 开发工具
+* git 日常命令
+* charles 日常抓包
+* sublime 常用插件和设置
+* vsCode 常用开发配置
+* 编辑器通用配置

@@ -75,6 +75,8 @@ module.exports = {
             '/js-base/ajax.md',
             '/js-base/cookie-storage.md',
             '/js-base/file.md',
+            '/js-base/promise.md',
+            '/js-base/js-mind.md',
           ]
         },
       ],

@@ -63,10 +63,11 @@
 * [Cookie & Storage](./js-base/cookie-storage.md)
 * [File & FileReader](./js-base/file.md)
 <!-- * new API -->
-* Promise
+* [Promise](./js-base/promise.md)
+* async await
 * Proxy
-* global API
-* js脑图
+<!-- * global API -->
+* [js脑图](./js-base/js-mind.md)
 
 ### Js 进阶
 * 严格模式

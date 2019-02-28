@@ -80,9 +80,7 @@
 [更多事件](https://developer.mozilla.org/zh-CN/docs/Web/Events)
 
 <!-- [错误捕获](https://segmentfault.com/a/1190000014672384) -->
-
 #### 关于事件属性
-
 ``` js
 //获取鼠标相对
 document.addEventListener('click', function(e){
@@ -126,7 +124,80 @@ document.addEventListener('click', function(e){
 }, false);
 ```
 
-#### Demo
+#### 事件绑定&移除
+``` js
+var CLICK_EVENT_NAME = null;
+
+//事件绑定
+document.addEventListener('click', CLICK_EVENT_NAME = function(){
+    console.log('点击');
+}, false);
+
+//解除绑定
+document.removeEventListener('click', CLICK_EVENT_NAME);
+```
+
+#### 自定义事件
+``` js
+// 事件注册
+function addEvent(sNode, sEventType, oFunc){
+    var oElement = sNode;
+    
+    if(oElement == null){
+        return false
+    }
+    
+    sEventType = sEventType || "click";
+    
+    if((typeof oFunc).toLowerCase() !== "function"){
+        return false;
+    }
+    
+    if(oElement.attachEvent){
+        oElement.attachEvent("on" + sEventType, oFunc);
+    } else {
+        if(oElement.addEventListener){
+            oElement.addEventListener(sEventType, oFunc, false)
+        } else {
+            oElement["on"+sEventType] = oFunc;
+        }
+    }
+    
+    return true;
+}
+
+//事件触发
+function fireEvent(element, type){
+    var event; 
+
+    if (document.createEvent) {
+        event = document.createEvent("HTMLEvents");
+        event.initEvent(type, true, true);
+    } else {
+        event = document.createEventObject();
+        event.eventType = type;
+    }
+
+    event.eventName = type;
+
+    if (document.createEvent) {
+        element.dispatchEvent(event);
+    } else {
+        element.fireEvent("on" + event.eventType, event);
+    } 
+}
+
+// 测试
+addEvent(document, 'ready', function(){
+    console.log('ready is happen');
+});
+
+//主动触发
+fireEvent(document, 'ready');
+
+```
+
+#### 滑轮
 
 ``` js
 //为内容区域添加滑轮滚动事件

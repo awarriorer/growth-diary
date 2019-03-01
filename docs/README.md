@@ -58,7 +58,6 @@
 * [BOM](./js-base/bom.md) 
 * [DOM](./js-base/dom.md)
 * [Event](./js-base/event.md)
-<!-- * 事件 -->
 * [Ajax](./js-base/ajax.md)
 * [Cookie & Storage](./js-base/cookie-storage.md)
 * [File & FileReader](./js-base/file.md)
@@ -71,18 +70,19 @@
 
 ### Js 进阶
 * 严格模式
-* 闭包，继承和原型链
+* 闭包
+* 原型链 & 继承
 * 内存机制
-* 并发模型以及事件循环
+<!-- * 并发模型以及事件循环 -->
 * 日常设计模式
 * 关于dom事件机制
+* 模块机制
 * 关于异步编程
     * promise的实现
     * async await的实现
-    * node async的实现
+    * node中async的实现
 * 日常算法
-    * 冒泡排序
-    * 快速排序
+    * 排序
     * 多路归并
     * 数组去重
     * 动态规划
@@ -120,16 +120,17 @@
 * 测试模块
 * 测试vue组件
 
-### 持续集成
-* 持续方案 a
-    * git
-    * nginx
-    * docker
-    * jenkins
-
 ### 开发工具
-* git 日常命令
+* [git 日常命令](./dev-tools/git-command.md)
 * charles 日常抓包
 * sublime 常用插件和设置
 * vsCode 常用开发配置
 * 编辑器通用配置
+
+### Linux
+* Linux日常命令
+* Nginx
+* Docker
+
+### 持续集成
+* 持续方案 docker + jenkins

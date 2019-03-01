@@ -17,7 +17,7 @@ module.exports = {
       sidebar: [
         {
           title: 'HTTP',
-          collapsable: false,
+          collapsable: true,
           children: [
             '/http/request-life',
             '/http/request-content',
@@ -34,7 +34,7 @@ module.exports = {
         },
         {
           title: 'HTML',
-          collapsable: false,
+          collapsable: true,
           children: [
             '/html/browser-render.md',
             '/html/seo.md',
@@ -43,7 +43,7 @@ module.exports = {
         },
         {
           title: 'CSS',
-          collapsable: false,
+          collapsable: true,
           children: [
             '/style/layout-center.md',
             '/style/flex.md',
@@ -53,7 +53,7 @@ module.exports = {
         },
         {
           title: 'JS基础',
-          collapsable: false,
+          collapsable: true,
           children: [
             '/js-base/string.md',
             '/js-base/boolean.md',
@@ -76,7 +76,16 @@ module.exports = {
             '/js-base/cookie-storage.md',
             '/js-base/file.md',
             '/js-base/promise.md',
+            '/js-base/proxy.md',
+            '/js-base/async-await.md',
             '/js-base/js-mind.md',
+          ]
+        },
+        {
+          title: '开发工具',
+          collapsable: true,
+          children: [
+            '/dev-tools/git-command.md',
           ]
         },
       ],

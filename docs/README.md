@@ -1,7 +1,7 @@
 ## 千里之行，始于足下
 努力一点，生活更美好...
 
-若有疑问，可以通过邮箱联(awarriorer@163.com)系我。
+若有疑问，可以通过邮箱(awarriorer@163.com)联系我。
 
 ### 基础知识
 #### HTTP
@@ -64,8 +64,8 @@
 * [File & FileReader](./js-base/file.md)
 <!-- * new API -->
 * [Promise](./js-base/promise.md)
-* async await
-* Proxy
+* [Async await](./js-base/async-await.md)
+* [Proxy](./js-base/proxy.md)
 <!-- * global API -->
 * [js脑图](./js-base/js-mind.md)
 
@@ -119,6 +119,13 @@
 * 测试静态文件
 * 测试模块
 * 测试vue组件
+
+### 持续集成
+* 持续方案 a
+    * git
+    * nginx
+    * docker
+    * jenkins
 
 ### 开发工具
 * git 日常命令

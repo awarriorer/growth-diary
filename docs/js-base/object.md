@@ -30,7 +30,6 @@ for(var key in myObj){
     console.log(myObj[key]); //依次输出："uncle-yang", "man"
 }
 
-
 // defineProperty
 var likeVal = '';
 
@@ -55,6 +54,27 @@ Object.defineProperty(myObj, 'like', {
 myObj.like = 'sleep'; // 调用set方法
 
 console.log(myObj.like); // 调用get方法
+
+//获取单一属性描述
+/**
+ * 返回
+ *  configurable: true
+    enumerable: true
+    value: "uncle-yang"
+    writable: true 
+ * 
+ */
+Object.getOwnPropertyDescriptor(myObj, 'name'); 
+//获取对象的所有属性描述
+Object.getOwnPropertyDescriptors(myObj);
+
+//返回对象的所有自身属性的属性名，包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组
+Object.getOwnPropertyNames(myObj);// ["name", "sex", 'like']
+
+myObj[Symbol('a')] = 'a';
+
+// 返回一个给定对象自身的所有 Symbol 属性的数
+Object.getOwnPropertySymbols(myObj); // [Symbol(a)]
 ```
 
 #### 改
@@ -119,4 +139,24 @@ console.log(Object.is(myObj, {
 
 var myObj_1 = myObj;
 console.log(Object.is(myObj, myObj_1)); // true
+```
+
+#### 监听
+``` js
+let obj = {
+    name: 'uncle-yang',
+    sex: 'man'
+}
+
+// 添加监听
+Object.observe(obj, observeFun);
+
+function observeFun(changes){
+    console.log(changes)
+}
+
+obj.name = '1'
+
+//移除监听
+Object.unobserve(obj, observeFun);
 ```

@@ -40,47 +40,48 @@
 #### JS基础
 <!-- * 语句
 * 数据类型 -->
-* [String](./js-base/string.md) 
-* [Boolean](./js-base/boolean.md) 
-* [Number](./js-base/number.md)
-* [Object](./js-base/object.md)
-* [Map](./js-base/map.md)
-* [WeakMap](./js-base/weakMap.md)
-* [Array](./js-base/array.md)
-* [Set](./js-base/set.md)
-* [WeakSet](./js-base/weakSet.md)
-* [Date](./js-base/date.md)
-* [RegExp](./js-base/regExp.md)
-* [Function](./js-base/function.md)
-* [Math](./js-base/math.md) 
+* [String](./js/string.md) 
+* [Boolean](./js/boolean.md) 
+* [Number](./js/number.md)
+* [Object](./js/object.md)
+* [Map](./js/map.md)
+* [WeakMap](./js/weakMap.md)
+* [Array](./js/array.md)
+* [Set](./js/set.md)
+* [WeakSet](./js/weakSet.md)
+* [Date](./js/date.md)
+* [RegExp](./js/regExp.md)
+* [Function](./js/function.md)
+* [Math](./js/math.md) 
 <!-- * Error  -->
-* [JSON](./js-base/json.md) 
-* [BOM](./js-base/bom.md) 
-* [DOM](./js-base/dom.md)
-* [Event](./js-base/event.md)
-* [Ajax](./js-base/ajax.md)
-* [Cookie & Storage](./js-base/cookie-storage.md)
-* [File & FileReader](./js-base/file.md)
+* [JSON](./js/json.md) 
+* [BOM](./js/bom.md) 
+* [DOM](./js/dom.md)
+* [Event](./js/event.md)
+* [Ajax](./js/ajax.md)
+* [Cookie & Storage](./js/cookie-storage.md)
+* [File & FileReader](./js/file.md)
 <!-- * new API -->
-* [Promise](./js-base/promise.md)
-* [Async await](./js-base/async-await.md)
-* [Proxy](./js-base/proxy.md)
+* [Promise](./js/promise.md)
+* [Async await](./js/async-await.md)
+* [Proxy](./js/proxy.md)
 <!-- * global API -->
-* [js脑图](./js-base/js-mind.md)
+* [js脑图](./js/js-mind.md)
 
 ### Js 进阶
-* 严格模式
+* [严格模式](./js-advanced/use-strict.md)
 * 闭包
-* 原型链 & 继承
+* 原型链
+* 继承
 * 内存机制
 <!-- * 并发模型以及事件循环 -->
-* 日常设计模式
 * 关于dom事件机制
 * 模块机制
 * 关于异步编程
     * promise的实现
     * async await的实现
     * node中async的实现
+* 日常设计模式
 * 日常算法
     * 排序
     * 多路归并
@@ -121,11 +122,12 @@
 * 测试vue组件
 
 ### 开发工具
+* [Chorme](./dev-tools/chrome.md)
 * [git 日常命令](./dev-tools/git-command.md)
-* charles 日常抓包
-* sublime 常用插件和设置
-* vsCode 常用开发配置
-* 编辑器通用配置
+* Charles
+* Sublime
+* VsCode
+* [EditorConfig](./dev-tools/editor-config.md)
 
 ### Linux
 * Linux日常命令

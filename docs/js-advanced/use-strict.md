@@ -39,8 +39,7 @@ function notStrict() {
 })()
 ```
 
-#### 约束哪些行为，下面这些行为将报错
-* 变量声明
+#### 变量声明
 ``` js
 "use strict";
 
@@ -55,7 +54,7 @@ function sum(a, a, c){ // !!! 语法错误
 }
 ```
 
-* 对象操作，
+#### 对象操作，
 ``` js
 "use strict";
 
@@ -79,7 +78,7 @@ var o = { p: 1, p: 2 }; //语法错误
 delete Object.prototype; // 抛出TypeError错误
 ```
 
-* 严禁八进制
+#### 严禁八进制
 ``` js
 "use strict";
 var sum = 015 + // !!! 语法错误
@@ -87,7 +86,7 @@ var sum = 015 + // !!! 语法错误
           142;
 ```
 
-* 禁止设置基本类型值的属性
+#### 禁止设置基本类型值的属性
 ``` js
 (function() {
     "use strict";
@@ -98,7 +97,86 @@ var sum = 015 + // !!! 语法错误
 })();
 ```
 
-* even在严格模式下执行，其中执行的内容也将被严格模式约束
+#### 函数操作
+``` js
+/**
+ * 严格模式下，改变指向的方法(call, apply, bind)
+ * 如果传递的第一个参数不是对象类型，那么将不会隐式转化成对象模式。
+ */
+(function(){
+    "use strict";
+    function fun() { return this; }
+    console.assert(fun() === undefined);
+    console.assert(fun.call(2) === 2);
+    console.assert(fun.apply(null) === null);
+    console.assert(fun.call(undefined) === undefined);
+    console.assert(fun.bind(true)() === true);
+})()
+
+(function(){
+    function restricted(){
+        "use strict";
+        restricted.caller;    // 抛出类型错误
+        restricted.arguments; // 抛出类型错误
+    }
+    function privilegedInvoker() {
+        return restricted();
+    }
+    privilegedInvoker();
+})()
+
+// 不允许对argument赋值
+(function(){
+    "use strict";
+
+　　arguments++; // 语法错误
+
+　　var obj = { set p(arguments) { } }; // 语法错误
+
+　　try { } catch (arguments) { } // 语法错误
+
+　　function arguments() { } // 语法错误
+
+　　var f = new Function("arguments", "'use strict'; return 17;"); // 语法错误
+})()
+
+//argument不再追踪变化
+(function(){
+    function f(a) {
+　　　　a = 2;
+
+　　　　return [a, arguments[0]];
+　　}
+
+　　f(1); // 正常模式为[2,2]
+
+　　function f(a) {
+
+　　　　"use strict";
+
+　　　　a = 2;
+
+　　　　return [a, arguments[0]];
+　　}
+
+　　f(1); // 严格模式为[2,1]
+})()
+
+// 函数声明，必须在顶层
+(function(){
+    "use strict";
+
+　　if (true) {
+　　　　function f() { } // 语法错误
+　　}
+
+　　for (var i = 0; i < 5; i++) {
+　　　　function f2() { } // 语法错误
+　　}
+})()
+```
+
+#### even在严格模式下执行，其中执行的内容也将被严格模式约束
 ``` js
 function strict1(str){
     "use strict";
@@ -117,8 +195,4 @@ var x;
 delete x; // !!! 语法错误
 
 eval("var y; delete y;"); // !!! 语法错误
-```
-* 函数操作
-``` js
-
 ```

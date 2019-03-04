@@ -82,6 +82,13 @@ module.exports = {
           ]
         },
         {
+          title: 'Js 进阶',
+          collapsable: true,
+          children: [
+            '/js-advanced/use-strict.md',
+          ]
+        },
+        {
           title: '开发工具',
           collapsable: true,
           children: [

@@ -7,6 +7,7 @@
 #### HTTP
 * [一个请求都经历了些什么？](./http/request-life.md)
 * [一个请求中都包含了什么？](./http/request-content.md)
+* [常见请求状态码](./http/response-status-codes.md)
 * [浏览器缓存](./http/browser-cache.md)
 * [浏览器请求限制](./http/request-limit.md)
 * [跨域解决方案](./http/cross-domain/index.md)
@@ -70,12 +71,12 @@
 
 ### Js 进阶
 * [严格模式](./js-advanced/use-strict.md)
-* 闭包
-* 原型链
-* 继承
-* 内存机制
+* [内存机制](./js-advanced/ram.md)
+* [作用域链 & 原型链](./js-advanced/scope-prototype.md)
+* [继承](./js-advanced/extend.md)
+* [闭包](./js-advanced/closure.md)
 <!-- * 并发模型以及事件循环 -->
-* 关于dom事件机制
+<!-- * 关于dom事件机制 -->
 * 模块机制
 * 关于异步编程
     * promise的实现

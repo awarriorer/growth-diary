@@ -21,6 +21,7 @@ module.exports = {
           children: [
             '/http/request-life',
             '/http/request-content',
+            '/http/response-status-codes.md',
             '/http/browser-cache',
             '/http/request-limit.md',
             '/http/cross-domain/',
@@ -86,6 +87,10 @@ module.exports = {
           collapsable: true,
           children: [
             '/js-advanced/use-strict.md',
+            '/js-advanced/ram.md',
+            '/js-advanced/scope-prototype.md',
+            '/js-advanced/extend.md',
+            '/js-advanced/closure.md',
           ]
         },
         {

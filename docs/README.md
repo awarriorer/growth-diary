@@ -67,7 +67,7 @@
 * [Async await](./js/async-await.md)
 * [Proxy](./js/proxy.md)
 <!-- * global API -->
-* [js脑图](./js/js-mind.md)
+* [Js脑图](./js/js-mind.md)
 
 ### Js 进阶
 * [严格模式](./js-advanced/use-strict.md)
@@ -77,13 +77,11 @@
 * [闭包](./js-advanced/closure.md)
 <!-- * 并发模型以及事件循环 -->
 <!-- * 关于dom事件机制 -->
-* 模块机制
-* 关于异步编程
-    * promise的实现
-    * async await的实现
-    * node中async的实现
-* 日常设计模式
-* 日常算法
+* promise的实现
+* async await的实现
+* [模块机制](./js-advanced/module.md)
+* 设计模式
+* 算法
     * 排序
     * 多路归并
     * 数组去重
@@ -91,11 +89,11 @@
     * 二分查找法
     * DFS 深度优先
 ### 前端框架
-* vue (v2.5.0)
+* vue(v2.5.0) 源码分析
     * new vue()时都发生了什么
     <!-- * [源码分析前的准备](./vue-analysis/vue-ready.md) -->
     <!-- * [源码分析:new vue()时都发生了什么](./vue-analysis/vue-ready.md) -->
-    * 源码分析:data的双向数据绑定是如何实现的？
+    * data的双向数据绑定是如何实现的？
     * computed是怎么实现的？
     * watch是怎么实现的？
     * 模板编译都经历了那些什么？
@@ -110,11 +108,22 @@
     * vue单元测试
 
 ### 构建工具
-* grunt
-* gulp
-* webpack
-* typeScript
-* flow.js
+* Grunt
+    * 常用配置
+    * 工作原理
+    * 如何写一个插件
+* Gulp
+    * 常用配置
+    * 工作原理
+    * 如何写一个插件
+* Webpack
+    * 常用配置
+    * 工作原理
+    * 如何写一个插件
+    * 如何写一个bable
+    * 日常插件收集
+* TypeScript
+* Flow.js
 
 ### 单元测试
 * Jasmine
@@ -122,18 +131,31 @@
 * 测试模块
 * 测试vue组件
 
+### Node
+* Npm
+    * 日常命令
+    * 工作原理
+    * 如何搭建一个npm服务
+    * 如何发布一个npm包
+* Async
+* Event
+* Express
+
 ### 开发工具
 * [Chorme](./dev-tools/chrome.md)
 * [git 日常命令](./dev-tools/git-command.md)
 * Charles
+    * 日常抓包
+    * 代理/替换请求
 * Sublime
 * VsCode
 * [EditorConfig](./dev-tools/editor-config.md)
 
 ### Linux
 * Linux日常命令
+* Vim
 * Nginx
 * Docker
 
 ### 持续集成
-* 持续方案 docker + jenkins
+* docker + jenkins

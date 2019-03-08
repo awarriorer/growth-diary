@@ -12,6 +12,7 @@ module.exports = {
     themeConfig: {
       nav: [
         { text: '首页', link: '/' },
+        { text: 'gitHub', link: 'https://github.com/awarriorer' },
         { text: '小站', link: 'http://www.uncle-yang.com' },
       ],
       sidebar: [

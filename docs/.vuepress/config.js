@@ -91,6 +91,7 @@ module.exports = {
             '/js-advanced/scope-prototype.md',
             '/js-advanced/extend.md',
             '/js-advanced/closure.md',
+            '/js-advanced/module.md',
           ]
         },
         {

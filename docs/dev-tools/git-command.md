@@ -6,6 +6,7 @@
 * [分支管理命令](#分支管理命令)
 * [撤销回滚](#撤销回滚)
 * [子模块](#子模块)
+* [添加多个远程仓库](#添加多个远程仓库)
 * [Tag](#Tag)
 * [查看信息](#查看信息)
 * [文件忽略](#文件忽略)
@@ -54,11 +55,11 @@ git add -A
 # 对于同一个文件的多处变化，可以实现分次提交
 git add -p
 
-# 删除工作区文件，并且将这次删除放入暂存区
-git rm [file1] [file2] ...
+# 删除工作区文件，并且将这次删除放入暂存区,删除本地文件
+git rm -f [file1] [file2] ...
 
-# 停止追踪指定文件，但该文件会保留在工作区
-git rm --cached [file]
+# 停止追踪指定文件，但该文件会保留在工作区,不删除本地文件
+git rm -f --cached [file]
 
 # 改名文件，并且将这个改名放入暂存区
 git mv [file-original] [file-renamed]
@@ -171,6 +172,8 @@ Git rm --cached  -r [path]
 # 4) 手动删除子模块残留的目录
 ```
 
+
+
 #### Tag
 ``` sh
 # 查看tag 
@@ -188,6 +191,25 @@ git tag -d v1.0.0
 #推送tag
 git push origin v1.0.0
 ```
+
+#### 添加多个远程仓库
+``` sh
+# 添加github
+git remote add origin https://github.com/xxx(仓库地址)
+# 添加oschina
+git remote add oschina https://git.oschina.net/xxxx(仓库地址)
+# 提交到oschina
+git push oschina master(分支名)
+# 提交到github
+git push origin master(分支名)
+# 提交到多个仓库
+git push --all
+# 从oschina更新
+git pull oschina master
+# 从github更新
+git pull origin master
+```
+
 #### 查看信息
 ``` sh
 # 显示有变更的文件

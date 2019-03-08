@@ -1,7 +1,11 @@
 ## 千里之行，始于足下
-努力一点，生活更美好...
+Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总结和学习。希望我的笔记能给你带来一些帮助，也希望你能及时的指出笔记中的错误和不足。愿你我始终都在求知的路上勇往直前，也愿你我的内心始终装着一个少年！
 
-若有疑问，可以通过邮箱(awarriorer@163.com)联系我。
+你也可以点击[我的个人小站](http://blog.uncle-yang.com/)以获得更好的阅读体验。
+
+若有疑问，可以通过邮箱(awarriorer@163.com)联系我
+
+努力一点，生活更美好...
 
 ### 基础知识
 #### HTTP
@@ -11,19 +15,18 @@
 * [浏览器缓存](./http/browser-cache.md)
 * [浏览器请求限制](./http/request-limit.md)
 * [跨域解决方案](./http/cross-domain/index.md)
-<!-- * 关于抓包以及日常HTTP调试 -->
 * [代理和反向代理](./http/about-proxy.md)
 * [什么又是HTTPS？](./http/about-https.md)
 * [关于websocket？](./http/webSocket.md)
 * [HTTP简要成长史](./http/http-history.md)
 * [Api设计的一些见解](./http/api-architecture.md)
 * [HTTP前端性能优化](./http/http-optimization.md)
-<!-- * 关于HTTP的一些问题 -->
+* 关于HTTP的一些问题
 
 #### HTMl 
 * [浏览器拿到htm后，都做了什么？](./html/browser-render.md)
-<!-- * html4和html5到底有什么区别？-->
-<!-- * html语义化怎么体现？  -->
+* html4和html5到底有什么区别？
+* html语义化怎么体现？ 
 * [html上的SEO](./html/seo.md)
 * [关于meta](./html/meta.md)
 
@@ -54,7 +57,6 @@
 * [RegExp](./js/regExp.md)
 * [Function](./js/function.md)
 * [Math](./js/math.md) 
-<!-- * Error  -->
 * [JSON](./js/json.md) 
 * [BOM](./js/bom.md) 
 * [DOM](./js/dom.md)
@@ -62,11 +64,9 @@
 * [Ajax](./js/ajax.md)
 * [Cookie & Storage](./js/cookie-storage.md)
 * [File & FileReader](./js/file.md)
-<!-- * new API -->
 * [Promise](./js/promise.md)
 * [Async await](./js/async-await.md)
 * [Proxy](./js/proxy.md)
-<!-- * global API -->
 * [Js脑图](./js/js-mind.md)
 
 ### Js 进阶
@@ -75,8 +75,6 @@
 * [作用域链 & 原型链](./js-advanced/scope-prototype.md)
 * [继承](./js-advanced/extend.md)
 * [闭包](./js-advanced/closure.md)
-<!-- * 并发模型以及事件循环 -->
-<!-- * 关于dom事件机制 -->
 * promise的实现
 * async await的实现
 * [模块机制](./js-advanced/module.md)
@@ -90,8 +88,9 @@
     * DFS 深度优先
 ### 前端框架
 * vue(v2.5.0) 源码分析
+    * 源码分析前的准备
     * new vue()时都发生了什么
-    <!-- * [源码分析前的准备](./vue-analysis/vue-ready.md) -->
+    <!-- * [](./vue-analysis/vue-ready.md) -->
     <!-- * [源码分析:new vue()时都发生了什么](./vue-analysis/vue-ready.md) -->
     * data的双向数据绑定是如何实现的？
     * computed是怎么实现的？

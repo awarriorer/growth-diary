@@ -202,8 +202,6 @@ git remote add oschina https://git.oschina.net/xxxx(仓库地址)
 git push oschina master(分支名)
 # 提交到github
 git push origin master(分支名)
-# 提交到多个仓库
-git push --all
 # 从oschina更新
 git pull oschina master
 # 从github更新

@@ -31,6 +31,7 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * [关于meta](./html/meta.md)
 
 #### CSS
+* Css 选择器和优先级
 * [关于居住中显示](./style/layout-center.md)
 <!-- * 关于浮动 -->
 <!-- * 文字两端对齐 -->
@@ -67,6 +68,8 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * [Promise](./js/promise.md)
 * [Async await](./js/async-await.md)
 * [Proxy](./js/proxy.md)
+* Class
+* Generator
 * [Js脑图](./js/js-mind.md)
 
 ### Js 进阶
@@ -75,20 +78,32 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * [作用域链 & 原型链](./js-advanced/scope-prototype.md)
 * [继承](./js-advanced/extend.md)
 * [闭包](./js-advanced/closure.md)
-* promise的实现
-* async await的实现
+* [Promise的实现](./js-advanced/promise.md)
+* [Async await的实现](./js-advanced/async-await.md)
 * [模块机制](./js-advanced/module.md)
-* 设计模式
-* 算法
-    * 排序
-    * 多路归并
-    * 数组去重
-    * 动态规划
-    * 图片旋转
-    * 二分查找法
-    * DFS 深度优先
+
+### 设计模式
+* Factory (工厂模式)
+* Decorator (装饰者模式)
+* Proxy (代理模式)
+* Adapter (适配器模式)
+* Builder (建造者模式)
+* Observer (观察者模式)
+* Singleton (单例模式)
+* Command (命令模式)
+
+### 算法
+* 常用排序
+* 数组去重
+* 动态规划
+* 图片旋转
+* 多路归并
+* 二分查找法
+* 二叉树
+* DFS 深度优先
+
 ### 前端框架
-* vue(v2.5.0) 源码分析
+* Vue(v2.5.0) 源码分析
     * 源码分析前的准备
     * new vue()时都发生了什么
     * data的双向数据绑定是如何实现的？
@@ -100,10 +115,11 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
     * 生命周期中的各个环节都做了什么？
     * components中，props是怎么实现的？
     * components是怎么实现的？
-    * 全局api
     * 指令是怎么实现的？
     * user 插件的原理
     * vue单元测试
+* Vue-router
+* Vuex
 
 ### 构建工具
 * Grunt
@@ -117,8 +133,8 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * Webpack
     * 常用配置
     * 工作原理
-    * 如何写一个插件
     * 如何写一个bable
+    * 如何写一个插件
     * 日常插件收集
 * TypeScript
 * Flow.js
@@ -131,7 +147,8 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 
 ### Node
 * Npm
-    * 日常命令
+    * [日常命令](./node/npm/command.md)
+    * [package.json](./node/npm/package.md)
     * 工作原理
     * 如何搭建一个npm服务
     * 如何发布一个npm包
@@ -154,6 +171,7 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * Vim
 * Nginx
 * Docker
+* Mysql
 
 ### 持续集成
 * docker + jenkins

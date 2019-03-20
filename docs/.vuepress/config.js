@@ -93,6 +93,8 @@ module.exports = {
             '/js-advanced/extend.md',
             '/js-advanced/closure.md',
             '/js-advanced/module.md',
+            '/js-advanced/promise.md',
+            '/js-advanced/async-await.md'
           ]
         },
         {

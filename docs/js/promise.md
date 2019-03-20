@@ -135,5 +135,3 @@ Promise.race([p5, p6]).then(function(value) {
   // p6 更快，所以它失败了
 });
 ```
-
-

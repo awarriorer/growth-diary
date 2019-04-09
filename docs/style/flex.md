@@ -28,7 +28,7 @@ flex布局，也叫弹性布局，兼容现代浏览器，在移动端的表现�
     ![wrap-reverse](./images/wrap-reverse.jpg)
 * flex-flow，是`flex-direction`和`flex-wrap`属性的简写形式
     * flex-flow: `<flex-direction>` || `<flex-wrap>`
-* justift-content, 定义flex项目在主轴上的对齐方式
+* justify-content, 定义flex项目在主轴上的对齐方式
     * flex-start: 默认，左对齐
     * flex-end: 右对齐
     * center： 剧中

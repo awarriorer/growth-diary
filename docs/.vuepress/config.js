@@ -12,7 +12,7 @@ module.exports = {
     themeConfig: {
       nav: [
         { text: '首页', link: '/' },
-        { text: 'gitHub', link: 'https://github.com/awarriorer' },
+        { text: 'gitHub', link: 'https://github.com/awarriorer/growth-diary' },
         { text: '小站', link: 'http://www.uncle-yang.com' },
       ],
       sidebar: [
@@ -98,11 +98,20 @@ module.exports = {
           ]
         },
         {
+          title: 'Node',
+          collapsable: true,
+          children: [
+            '/node/npm/command.md',
+            '/node/npm/package.md',
+          ]
+        },
+        {
           title: '开发工具',
           collapsable: true,
           children: [
             '/dev-tools/chrome.md',
             '/dev-tools/git-command.md',
+            '/dev-tools/vscode.md',
             '/dev-tools/editor-config.md',
           ]
         },

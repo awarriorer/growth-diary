@@ -82,6 +82,29 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * [Async await的实现](./js-advanced/async-await.md)
 * [模块机制](./js-advanced/module.md)
 
+
+### 数据结构
+* [前篇](./data-structure/before.md)
+* [数组(Array)](./data-structure/array.md)
+* 堆栈(Stack)
+* 队列(Queue)
+* 链表(Linked List）
+* 树(Tree)
+* 散列表(Hash)
+* 堆(Heap)
+* 图(Graph)
+
+### 算法
+* 前篇
+* 常用排序
+* 数组去重
+* 动态规划
+* 图片旋转
+* 多路归并
+* 二分查找法
+* 二叉树
+* DFS 深度优先
+
 ### 设计模式
 * Factory (工厂模式)
 * Decorator (装饰者模式)
@@ -91,16 +114,6 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * Observer (观察者模式)
 * Singleton (单例模式)
 * Command (命令模式)
-
-### 算法
-* 常用排序
-* 数组去重
-* 动态规划
-* 图片旋转
-* 多路归并
-* 二分查找法
-* 二叉树
-* DFS 深度优先
 
 ### 前端框架
 * Vue(v2.5.0) 源码分析
@@ -163,7 +176,7 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
     * 日常抓包
     * 代理/替换请求
 * Sublime
-* VsCode
+* [VsCode](./dev-tools/vscode.md)
 * [EditorConfig](./dev-tools/editor-config.md)
 
 ### Linux

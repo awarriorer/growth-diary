@@ -172,8 +172,6 @@ Git rm --cached  -r [path]
 # 4) 手动删除子模块残留的目录
 ```
 
-
-
 #### Tag
 ``` sh
 # 查看tag 
@@ -244,6 +242,10 @@ git show [commit]
 node_modules/
 dist/
 ```
+强制添加文件到监听队列
+``` sh
+git add -f dist
+```
 
 #### 用户配置
 ``` sh
@@ -276,7 +278,7 @@ The key fingerprint is:
 最后得到了两个文件：id_rsa和id_rsa.pub
 
 3. 添加密钥到ssh：ssh-add 文件名,需要之前输入密码
-4. 在github上添加ssh密钥，这要添加的是`id_rsa.pub`里面的公钥。打开https://github.com/,登陆，然后添加ssh
+4. 在github上添加ssh密钥，这要添加的是`id_rsa.pub`里面的公钥。打开[https://github.com/](https://github.com/),登陆，然后添加ssh
 5. 测试
 ``` sh
 ssh git@github.com

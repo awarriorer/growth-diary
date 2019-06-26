@@ -79,6 +79,7 @@ module.exports = {
             '/js/file.md',
             '/js/promise.md',
             '/js/proxy.md',
+            '/js/class.md',
             '/js/async-await.md',
             '/js/js-mind.md',
           ]
@@ -98,11 +99,45 @@ module.exports = {
           ]
         },
         {
+          title: '设计模式',
+          collapsable: true,
+          children: [
+            '/design-patterns/factory.md',
+            '/design-patterns/singleton.md',
+            '/design-patterns/adapter.md',
+            '/design-patterns/filter.md',
+            '/design-patterns/decorator.md',
+            '/design-patterns/proxy.md',
+            '/design-patterns/observer.md',
+            '/design-patterns/command.md',
+          ]
+        },
+        {
+          title: 'Vue',
+          collapsable: true,
+          children: [
+            '/vue-analysis/vue-ready.md',
+            '/vue-analysis/vue-1.md',
+            '/vue-analysis/vue-2.md',
+            '/vue-analysis/new-vue.md',
+            '/vue-analysis/state-0.md',
+            '/vue-analysis/state-1.md',
+            '/vue-analysis/state-2.md',
+          ]
+        },
+        {
           title: 'Node',
           collapsable: true,
           children: [
             '/node/npm/command.md',
             '/node/npm/package.md',
+          ]
+        },
+        {
+          title: 'Docker',
+          collapsable: true,
+          children: [
+            '/docker/command.md',
           ]
         },
         {

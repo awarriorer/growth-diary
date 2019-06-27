@@ -20,8 +20,8 @@ new Vue({
     }
   },
   watch: {
-    nameWatcher: function(newVal, oldVal){
-      console.log(`my new name is ${newVal}`);
+    age: function(newVal, oldVal){
+      console.log(`my new age is ${newVal}`);
     }
   },
   methods: {
@@ -70,12 +70,21 @@ new Vue({
   * 然后执行`_computedWatchers[showInfo].addDep(dep)`
   * 在`Watcher.addDep`函数中，又把`_computedWatchers[showInfo]`对应的`Watcher`实例`push`到了`dep.subs`数组中
   * 从此完成`showInfo`对`name`和`age`依赖的收集
+  * 且得到了函数运行的值`my name is uncle-yang, i'm 30`，并且赋值给`Watcher.value`
   * 当给`name`和`age`设置新值时，触发其各自被`defineReactive`劫持的`setter`函数
   * 然后执行到`dep.notify()`
   * 从而调用`dep.subs`中所有`Watcher.update`方法
-* 把`showInfo`包装成一个对象，对象的`getter`对应其对应的函数
+  * 由于`computed`默认选项`{lazy: true}`，所以只是改变了`Watcher`内部变量的值`dirty = true`
+* 调用`createComputedGetter`把`showInfo`包装成一个对象，其`getter`返回`Watcher.value`
 
 #### watch
-* 
+* 获取到`watch`选项
+* 获取到`age`选项
+* 调用`this.$watch('age', ageFun)`,这个方法在`stateMixin`方法中混入
+* 在`$watch`中执行`new Watcher(vm, 'age', ageFun, {user: true})`
+  * 在`watcher`实例中
+  * `watcher.getter`为一个函数`function(){return vm.age}`
+  * 在调用`get`方法是完成`watcher`依赖的收集
+  * 当`age`改变时，触发传入的`ageFun`回调函数
 
 

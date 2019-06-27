@@ -278,25 +278,8 @@ export function defineReactive (
 let uid = 0
 
 export default class Watcher {
-  vm: Component;
-  expression: string;
-  cb: Function;
-  id: number;
-  deep: boolean;
-  user: boolean;
-  lazy: boolean;
-  sync: boolean;
-  dirty: boolean;
-  active: boolean;
-  deps: Array<Dep>;
-  newDeps: Array<Dep>;
-  depIds: SimpleSet;
-  newDepIds: SimpleSet;
-  getter: Function;
-  value: any;
-
   constructor (
-    vm: Component, //当前实例
+    vm: Component, //当前vue实例
     expOrFn: string | Function,
     cb: Function, // 回调函数
     options?: ?Object, // 选项

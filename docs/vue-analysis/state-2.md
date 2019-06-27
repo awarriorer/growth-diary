@@ -88,3 +88,7 @@ new Vue({
   * 当`age`改变时，触发传入的`ageFun`回调函数
 
 
+  #### 小结
+  * 状态初始化的顺序是`props,method,data,computed,watch`,所以访问顺序也是有区别的，例如可以在`data`中访问`props`，但是不能反过来
+
+

@@ -27,7 +27,7 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 #### HTMl 
 * [浏览器拿到htm后,都做了什么](./html/browser-render.md)
 * html4和html5到底有什么区别？
-* html语义化怎么体现？ 
+* [html语义化怎么体现？](./html/semanticization.md) 
 * [html上的SEO](./html/seo.md)
 * [关于meta](./html/meta.md)
 
@@ -152,12 +152,13 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
     * 如何写一个插件
 * Webpack
     * 常用配置
+    * [常用函数](./webpack/function-api.md)
     * 工作原理
     * 如何写一个bable
     * 如何写一个插件
     * 日常插件收集
-* TypeScript
-* Flow.js
+    * Flow.js
+### TypeScript
 
 ### 单元测试
 * Jasmine

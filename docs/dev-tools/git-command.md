@@ -12,6 +12,7 @@
 * [文件忽略](#文件忽略)
 * [用户配置](#用户配置)
 * [密钥配置](#密钥配置)
+* [多密钥配置](#多密钥配置)
 
 #### 最简流程开发
 ``` sh
@@ -279,7 +280,41 @@ The key fingerprint is:
 
 3. 添加密钥到ssh：ssh-add 文件名,需要之前输入密码
 4. 在github上添加ssh密钥，这要添加的是`id_rsa.pub`里面的公钥。打开[https://github.com/](https://github.com/),登陆，然后添加ssh
+5. 测试是否成功
+``` sh
+ssh -T git@github.com
+```
+
+#### 多密钥配置
+当有多个git账号的时候，比如一个github，用于自己进行一些开发活动，再来一个gitlab，一般是公司内部的git。这两者你的邮箱如果不同的话，就会涉及到一个问题，生成第二个git的key的时候会覆盖第一个的key，导致必然有一个用不了
+
+1. 生成密钥
+``` sh
+ssh-keygen -t rsa -C new@email.com
+```
+2. 上方命令执行后，会让你输入新密钥的名称
+``` sh
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/*/.ssh/id_rsa): id_rsa_new
+```
+3. 把新的密钥添加到对应的平台
+4. 在`./.ssh`下创建`config`配置文件，配置以下内容
+``` sh
+# github
+Host github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_old
+User name
+
+# gitee
+Host gitee.com
+HostName gitee.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa_new
+User name
+```
 5. 测试
 ``` sh
-ssh git@github.com
+ssh -T git@github.com
 ```

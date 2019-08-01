@@ -193,6 +193,8 @@ git push origin v1.0.0
 
 #### 添加多个远程仓库
 ``` sh
+# 查看当前源
+git remote
 # 添加github
 git remote add origin https://github.com/xxx(仓库地址)
 # 添加oschina

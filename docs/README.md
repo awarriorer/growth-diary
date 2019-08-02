@@ -130,7 +130,7 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
     * [理解内部状态前的准备](./vue-analysis/state-0.md)
     * [组件内部状态](./vue-analysis/state-1.md)
     * [组件内部状态小结](./vue-analysis/state-2.md)
-    * 模板编译都经历了那些什么
+    * [模板编译都经历了那些什么](./vue-analysis/mount.md)
     * 虚拟dom是什么？虚拟dom如何比对差异的
     * $nextTick是怎么实现的？
     * 生命周期中的各个环节都做了什么

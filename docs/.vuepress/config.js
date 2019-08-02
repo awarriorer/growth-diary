@@ -123,6 +123,7 @@ module.exports = {
             '/vue-analysis/state-0.md',
             '/vue-analysis/state-1.md',
             '/vue-analysis/state-2.md',
+            '/vue-analysis/mount.md'
           ]
         },
         {

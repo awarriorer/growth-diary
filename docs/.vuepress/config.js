@@ -39,6 +39,7 @@ module.exports = {
           collapsable: true,
           children: [
             '/html/browser-render.md',
+            './html/semanticization.md',
             '/html/seo.md',
             '/html/meta.md',
           ]
@@ -47,6 +48,7 @@ module.exports = {
           title: 'CSS',
           collapsable: true,
           children: [
+            './style/selector.md',
             '/style/layout-center.md',
             '/style/flex.md',
             '/style/less.md',
@@ -147,6 +149,7 @@ module.exports = {
           children: [
             '/dev-tools/chrome.md',
             '/dev-tools/git-command.md',
+            '/dev-tools/iterm2.md',
             '/dev-tools/vscode.md',
             '/dev-tools/editor-config.md',
           ]

@@ -195,6 +195,10 @@ git push origin v1.0.0
 ``` sh
 # 查看当前源
 git remote
+# 查看当前源地址
+git remote get-url origin
+# 设置当前源的地址
+git remote set-url origin https://github.com/xxx(新的仓库地址)
 # 添加github
 git remote add origin https://github.com/xxx(仓库地址)
 # 添加oschina
@@ -319,4 +323,27 @@ User name
 5. 测试
 ``` sh
 ssh -T git@github.com
+```
+
+#### 合并commit
+从HEAD版本开始往过去数3个版本
+```
+git rebase -i HEAD~3
+```
+指名要合并的版本之前的版本号
+``` sh
+git rebase -i commitId
+```
+执行后，会进入vim窗口，执行`:%s/pick/s/g`后，把第一行的`s`改为`pick`,修改文案，保存推出
+
+推送到服务器
+``` sh
+git add -A
+git rebase --continue  
+git push origin branchName -f
+```
+
+放弃本次压缩合并
+``` sh
+git rebase --abort  
 ```

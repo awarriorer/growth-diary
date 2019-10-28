@@ -137,6 +137,13 @@ module.exports = {
           ]
         },
         {
+          title: 'Webpack',
+          collapsable: true,
+          children: [
+            './webpack/function-api.md'
+          ]
+        },
+        {
           title: 'Docker',
           collapsable: true,
           children: [

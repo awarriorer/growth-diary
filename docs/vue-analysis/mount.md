@@ -33,6 +33,8 @@ export function mountComponent (
     hydrating?: boolean
 ): Component {
     vm.$el = el
+
+    // 渲染节点
     if (!vm.$options.render) {
         vm.$options.render = createEmptyVNode
     }
@@ -47,8 +49,7 @@ export function mountComponent (
     new Watcher(vm, updateComponent, noop, null, true /* isRenderWatcher */)
     hydrating = false
 
-    // manually mounted instance, call mounted on self
-    // mounted is called for render-created child components in its inserted hook
+    // 改变内部变量的状态_isMounted，触发钩子
     if (vm.$vnode == null) {
         vm._isMounted = true
         callHook(vm, 'mounted')
@@ -72,11 +73,11 @@ Vue.prototype.$mount = function (
     }
 
     const options = this.$options
-    // 解析模版,el,定义render
+    // 如果render函数不存在
     if (!options.render) {
         let template = options.template
 
-        // 确认模版
+        // 确认模版，template存在的时候，获取template,不存在的时候获取el的outerHtml
         if (template) {
             if (typeof template === 'string') {
                 if (template.charAt(0) === '#') {
@@ -91,7 +92,7 @@ Vue.prototype.$mount = function (
             template = getOuterHTML(el)
         }
 
-        // 确定render,和staticRenderFns
+        // 使template编译成render函数
         if (template) {
             const { render, staticRenderFns } = compileToFunctions(template, {
                 shouldDecodeNewlines,
@@ -105,4 +106,14 @@ Vue.prototype.$mount = function (
     }
     return mount.call(this, el, hydrating)
 }
+```
+
+#### 那么模版是怎么编译的？
+从上面的代码中，可以看出，最后执行了`compileToFunctions`函数得到了`render`和`staticRenderFns`函数。那么也就是是，模版的解析是在`compileToFunctions`这个函数中实现的。继续扒代码
+
+``` js
+// src/paltforms/compiler/index
+
+const { compile, compileToFunctions } = createCompiler(baseOptions)
+
 ```

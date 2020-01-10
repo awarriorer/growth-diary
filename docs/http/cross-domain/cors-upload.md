@@ -1,9 +1,11 @@
-### 日常跨域解决方案之(CORS-upload)
+# CORS-upload
+
 -------
 
 这个地方的实现和cors的实现是一样的，这个栗子只有html部分不一样
 
-http://dev.test.com/cors-upload.html
+`http://dev.test.com/cors-upload.html`
+
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -93,8 +95,7 @@ http://dev.test.com/cors-upload.html
 </html>
 ```
 
-http://dev.example.com node server.js
-
+`http://dev.example.com` node server.js
 
 ``` js
 var express    = require('express');
@@ -168,16 +169,16 @@ var server = app.listen(3500, function(){
 })
 ```
 
-### 小结
+## 小结
 
 * 本质
-    * 同源策略是浏览器的，并不是服务器的，服务器只要收到请求，就会响应
-	* 跨域请求时，浏览器会自动在header中，加上origin='当前域名'
-    * 如果服务器设置了同意当前域名访问的许可，才可以被访问
+  * 同源策略是浏览器的，并不是服务器的，服务器只要收到请求，就会响应
+  * 跨域请求时，浏览器会自动在header中，加上origin='当前域名'
+  * 如果服务器设置了同意当前域名访问的许可，才可以被访问
 * 缺点
-    * 需要浏览器支持，且兼容不是十分好，需要IE10+
+  * 需要浏览器支持，且兼容不是十分好，需要IE10+
 * 优点
-    * 支持各种请求，包括上传
-	* 只需要后端进行简单配置，前端请求无差异,和日常ajax请求一样
+  * 支持各种请求，包括上传
+  * 只需要后端进行简单配置，前端请求无差异,和日常ajax请求一样
 * 适用场景
-	* 任性的你不需要兼容低版本浏览器
+  * 任性的你不需要兼容低版本浏览器

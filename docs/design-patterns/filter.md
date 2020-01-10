@@ -1,9 +1,9 @@
-### 过滤器模式(Filter)
------------
+# 过滤器模式(Filter)
 
 过滤器模式（Filter Pattern）或标准模式（Criteria Pattern）是一种设计模式，这种模式允许开发人员使用不同的标准来过滤一组对象，通过逻辑运算以解耦的方式把它们连接起来
 
-#### 例子
+## 例子
+
 ``` js
 class Filter {
     constructor(numbers) {
@@ -17,7 +17,7 @@ class Filter {
 
         for(let i = 0; i < this.numbers.length; i++){
             let num = this.numbers[i];
-            
+
             if(this.doFilter(num)){
                 arr.push(num);
             }

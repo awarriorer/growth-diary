@@ -1,4 +1,4 @@
-## 千里之行，始于足下
+# 千里之行，始于足下
 
 Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总结和学习。希望我的笔记能给你带来一些帮助，也希望你能及时的指出笔记中的错误和不足。愿你我始终都在求知的路上勇往直前，也愿你我的内心始终装着一个少年！
 
@@ -8,8 +8,10 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 
 努力一点，生活更美好...
 
-### 基础知识
-#### HTTP
+## 基础知识
+
+## HTTP
+
 * [一个请求都经历了些什么](./http/request-life.md)
 * [一个请求中都包含了什么](./http/request-content.md)
 * [常见请求状态码](./http/response-status-codes.md)
@@ -24,30 +26,43 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * [HTTP前端性能优化](./http/http-optimization.md)
 <!-- * 关于HTTP的一些问题 -->
 
-#### HTMl 
+## 常用跨域方案
+
+* [Jsonp]('/http/cross-domain/jsonp.md')
+* [CORS]('/http/cross-domain/cors.md')
+* [Nginx-proxy]('/http/cross-domain/nginx-proxy.md')
+* [Server-proxy]('/http/cross-domain/server-proxy.md')
+* [Iframe-postmessage]('/http/cross-domain/iframe-postmessage.md')
+* [Iframe-window-name]('/http/cross-domain/iframe-window-name.md')
+* [Cors-upload]('/http/cross-domain/cors-upload.md')
+* [Iframe-form-postMessage-upload]('/http/cross-domain/iframe-form-postMessage-upload.md')
+
+## HTMl
+
 * [浏览器拿到htm后,都做了什么](./html/browser-render.md)
 <!-- * html4和html5到底有什么区别？ -->
 * [html语义化怎么体现？](./html/semanticization.md)
 * [html上的SEO](./html/seo.md)
 * [关于meta](./html/meta.md)
 
-#### CSS
+## CSS
+
 * [选择器和优先级](./style/selector.md)
 * [关于居住中显示](./style/layout-center.md)
-<!-- * 关于浮动 -->
-<!-- * 文字两端对齐 -->
-<!-- * css三角形 -->
-<!-- * css常见布局及实现 -->
-<!-- * css模态框 -->
+* [常用样式写法](./style/commonly-used.md)
 * [关于flex布局](./style/about-flex.md)
 * [Less常用语法](./style/less.md)
 * [Sass常用语法](./style/sass.md)
 
-#### JS基础
-<!-- * 语句
-* 数据类型 -->
-* [String](./js/string.md) 
-* [Boolean](./js/boolean.md) 
+## 移动端
+
+* 常用适配方案
+* 输入框被遮挡
+
+## JS基础
+
+* [String](./js/string.md)
+* [Boolean](./js/boolean.md)
 * [Number](./js/number.md)
 * [Object](./js/object.md)
 * [Map](./js/map.md)
@@ -58,9 +73,9 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * [Date](./js/date.md)
 * [RegExp](./js/regExp.md)
 * [Function](./js/function.md)
-* [Math](./js/math.md) 
-* [JSON](./js/json.md) 
-* [BOM](./js/bom.md) 
+* [Math](./js/math.md)
+* [JSON](./js/json.md)
+* [BOM](./js/bom.md)
 * [DOM](./js/dom.md)
 * [Event](./js/event.md)
 * [Ajax](./js/ajax.md)
@@ -73,7 +88,8 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * [Generator](./js/generator.md)
 * [Js脑图](./js/js-mind.md)
 
-### Js 进阶
+## Js 进阶
+
 * [严格模式](./js-advanced/use-strict.md)
 * [内存机制](./js-advanced/ram.md)
 * [作用域链 & 原型链](./js-advanced/scope-prototype.md)
@@ -82,9 +98,9 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * [Promise的实现](./js-advanced/promise.md)
 * [Async await的实现](./js-advanced/async-await.md)
 * [模块机制](./js-advanced/module.md)
+* 宏观任和微任务
 
-
-<!-- ### 数据结构
+<!-- ## 数据结构
 * [前篇](./data-structure/before.md)
 * [数组(Array)](./data-structure/array.md)
 * 堆栈(Stack)
@@ -95,7 +111,7 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * 堆(Heap)
 * 图(Graph)
 
-### 算法
+## 算法
 * 前篇
 * 常用排序
 * 数组去重
@@ -106,93 +122,104 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * 二叉树
 * DFS 深度优先 -->
 
-### 设计模式(Design Patterns)
+## 设计模式(Design Patterns)
+
 * [前篇](./design-patterns/before.md)
 * 创建模式
-    * [工厂模式(Factory)](./design-patterns/factory.md)
-    * [单例模式(Singleton)](./design-patterns/singleton.md)
-    * 建造者模式(Builder)
+  * [工厂模式(Factory)](./design-patterns/factory.md)
+  * [单例模式(Singleton)](./design-patterns/singleton.md)
+  * 建造者模式(Builder)
 * 结构模式
-    * [适配器模式(Adapter)](./design-patterns/adapter.md)
-    * [过滤器模式(Filter))](./design-patterns/filter.md)
-    * [装饰者模式(Decorator)](./design-patterns/decorator.md)
-    * [代理模式(Proxy)](./design-patterns/proxy.md)
+  * [适配器模式(Adapter)](./design-patterns/adapter.md)
+  * [过滤器模式(Filter))](./design-patterns/filter.md)
+  * [装饰者模式(Decorator)](./design-patterns/decorator.md)
+  * [代理模式(Proxy)](./design-patterns/proxy.md)
 * 行为模式
-    * [观察者模式(Observer)](./design-patterns/observer.md)
-    * [命令模式(Command)](./design-patterns/command.md)
+  * [观察者模式(Observer)](./design-patterns/observer.md)
+  * [命令模式(Command)](./design-patterns/command.md)
 
-### 前端框架
+## 前端框架
+
 * Vue(v2.5.16) 源码分析
-    * [源码分析前的准备](./vue-analysis/vue-ready.md)
-    * [vue是什么(一)](./vue-analysis/vue-1.md)
-    * [vue是什么(二)](./vue-analysis/vue-2.md)
-    * [new vue时发生了什么](./vue-analysis/new-vue.md)
-    * [理解内部状态前的准备](./vue-analysis/state-0.md)
-    * [组件内部状态](./vue-analysis/state-1.md)
-    * [组件内部状态小结](./vue-analysis/state-2.md)
-    * [模板编译都经历了那些什么](./vue-analysis/mount.md)
-    * 虚拟dom是什么？虚拟dom如何比对差异的
-    * $nextTick是怎么实现的？
-    * 生命周期中的各个环节都做了什么
-    * components是怎么实现的？
-    * 指令是怎么实现的？
-    * user 插件的原理
-    * vue单元测试
+  * [源码分析前的准备](./vue-analysis/vue-ready.md)
+  * [vue是什么(一)](./vue-analysis/vue-1.md)
+  * [vue是什么(二)](./vue-analysis/vue-2.md)
+  * [new vue时发生了什么](./vue-analysis/new-vue.md)
+  * [理解内部状态前的准备](./vue-analysis/state-0.md)
+  * [组件内部状态](./vue-analysis/state-1.md)
+  * [组件内部状态小结](./vue-analysis/state-2.md)
+  * [模板编译都经历了那些什么](./vue-analysis/mount.md)
+  * 虚拟dom是什么？虚拟dom如何比对差异的
+  * $nextTick是怎么实现的？
+  * 生命周期中的各个环节都做了什么
+  * components是怎么实现的？
+  * 指令是怎么实现的？
+  * user 插件的原理
+  * vue单元测试
 * Vue-router
 * Vuex
 
-### 构建工具
-* Grunt
-    * 常用配置
-    * 工作原理
-    * 如何写一个插件
-* Gulp
-    * 常用配置
-    * 工作原理
-    * 如何写一个插件
-* Webpack
-    * 常用配置
-    * [常用函数](./webpack/function-api.md)
-    * 工作原理
-    * 如何写一个bable
-    * 如何写一个插件
-    * 日常插件收集
-    * Flow.js
-### TypeScript
+## 构建工具
 
-### 单元测试
+* Grunt
+  * 常用配置
+  * 工作原理
+  * 如何写一个插件
+
+* Gulp
+  * 常用配置
+  * 工作原理
+  * 如何写一个插件
+
+* Webpack
+  * 常用配置
+  * [常用函数](./webpack/function-api.md)
+  * 工作原理
+  * 如何写一个bable
+  * 如何写一个插件
+  * 日常插件收集
+  * Flow.js
+
+## TypeScript
+
+## 单元测试
+
 * Jasmine
 * 测试静态文件
 * 测试模块
 * 测试vue组件
 
-### Node
+## Node
+
 * Npm
-    * [日常命令](./node/npm/command.md)
-    * [package.json](./node/npm/package.md)
-    * 工作原理
-    * 如何搭建一个npm服务
-    * 如何发布一个npm包
+  * [日常命令](./node/npm/command.md)
+  * [package.json](./node/npm/package.md)
+  * 工作原理
+  * 如何搭建一个npm服务
+  * 如何发布一个npm包
 * Async
 * Event
 * Express
 
-### 开发工具
+## 开发工具
+
 * [Chorme](./dev-tools/chrome.md)
 * [git 日常命令](./dev-tools/git-command.md)
 * [iterm2](./dev-tools/iterm2.md)
 * Charles
-    * 日常抓包
-    * 代理/替换请求
+  * 日常抓包
+  * 代理/替换请求
 * Sublime
 * [VsCode](./dev-tools/vscode.md)
 * [EditorConfig](./dev-tools/editor-config.md)
 
-### Linux
+## Linux
+
 * Linux日常命令
 * Vim
 
-### Nginx
+## Nginx
+
 * [Nginx和代理](./nginx/nginx.md)
 * [日常配置文件](./nginx/nginx-config.md)
 * Https配置
@@ -201,9 +228,19 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 * 负载均衡
 * 缓存
 
-### Docker
-* [docker日常命令](./docker/command.md)
-### Mysql
+## Docker
 
-### 持续集成
+* [docker日常命令](./docker/command.md)
+
+## Mysql
+
+## 持续集成
+
 * docker + jenkins
+
+## 面试图
+
+* [百度](./interview/baidu.md)
+* [蚂蚁金服](./interview/antfin.md)
+* [腾讯](./interview/tencent.md)
+* [其他](./interview/other.md)

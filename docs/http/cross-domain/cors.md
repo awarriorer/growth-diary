@@ -1,10 +1,12 @@
-### 日常跨域解决方案之(CROS)
+# CROS
+
 -------
 
 这是个相对较新，且比较省力的一个跨域方案。直接用代码演示
 CORS，跨域资源共享(Cross-origin resource sharing)
 
-http://dev.test.com/cors.html
+`http://dev.test.com/cors.html`
+
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -62,8 +64,7 @@ http://dev.test.com/cors.html
 </html>
 ```
 
-http://dev.example.com node server.js
-
+`http://dev.example.com` node server.js
 
 ``` js
 var express = require('express');
@@ -109,17 +110,17 @@ var server = app.listen(3500, function(){
 在发出非get请求时，浏览器会先对服务器发起一次预检测，询问服务器，当前的是否知识该请求类型的跨域
 :::
 
-### 小结
+## 小结
 
 * 本质
-    * 同源策略是浏览器的，并不是服务器的，服务器只要收到请求，就会响应
-	* 跨域请求时，浏览器会自动在header中，加上origin='当前域名'
-    * 如果服务器设置了同意当前域名访问的许可，才可以被访问
+  * 同源策略是浏览器的，并不是服务器的，服务器只要收到请求，就会响应
+  * 跨域请求时，浏览器会自动在header中，加上origin='当前域名'
+  * 如果服务器设置了同意当前域名访问的许可，才可以被访问
 * 缺点
-    * 需要浏览器支持，且兼容不是十分好，需要IE10+
+  * 需要浏览器支持，且兼容不是十分好，需要IE10+
 * 优点
-    * 支持各种请求，包括上传
-	* 只需要后端进行简单配置，前端请求无差异,和日常ajax请求一样
+  * 支持各种请求，包括上传
+  * 只需要后端进行简单配置，前端请求无差异,和日常ajax请求一样
 * 适用场景
-	* 任性不兼容低版本浏览器
-	* 只是上传文件，请看[CORS-upload](./cors-upload.md)
+  * 任性不兼容低版本浏览器
+  * 只是上传文件，请看[CORS-upload](./cors-upload.md)

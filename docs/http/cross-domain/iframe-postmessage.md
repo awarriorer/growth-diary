@@ -1,4 +1,5 @@
-### 日常跨域解决方案之(iframe + postMessage)
+# iframe + postMessage
+
 -------
 
 原理：postMessage可以与任意域名之间通信(只要能通信了，其他的就都是浮云了),  
@@ -154,15 +155,15 @@ http://dev.example.com/iframe-postMessage.html
 </html>
 ```
 
-### 小结
+## 小结
 
 * 本质
-    * postMessage跨域通信
-    * 把请求委托给目标域名的页面
+  * postMessage跨域通信
+  * 把请求委托给目标域名的页面
 * 缺点
-    * ie8+才支持，而且ie8+<ie10只支持iframe的方式
+  * ie8+才支持，而且ie8+<ie10只支持iframe的方式
 * 优点
-    * 支持各个类型的请求
+  * 支持各个类型的请求
 * 适用场景
-	* 任性不兼容低版本浏览器
-	* 当前模式不支持上传文件，如需有上传文件的需求，请看[iframe-form-postMessage-upload](./iframe-form-postMessage-upload.md)
+  * 任性不兼容低版本浏览器
+  * 当前模式不支持上传文件，如需有上传文件的需求，请看[iframe-form-postMessage-upload](./iframe-form-postMessage-upload.md)

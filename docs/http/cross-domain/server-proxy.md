@@ -1,9 +1,11 @@
-### 日常跨域解决方案之(server-proxy)
+# server-proxy
+
 -------
 
 server代理是实现跨域请求的一种后端实现手段，原理是在请求到本地服务的。
 
-http://dev.test.com/server-proxy.html
+`http://dev.test.com/server-proxy.html`
+
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +63,7 @@ http://dev.test.com/server-proxy.html
 </html>
 ```
 
-http://dev.example.com node server.js
+`http://dev.example.com` node server.js
 
 ``` js
 var express = require('express');
@@ -121,22 +123,20 @@ app.get('/server-proxy-api/*',function(req, res){
 });
 
 // start server
-var server = app.listen(5678, function(){
+	var server = app.listen(5678, function(){
 	var host = server.address().address;
-  	var port = server.address().port;
+	var port = server.address().port;
 
 	console.log('Example app listening at http://%s:%s', host, port);
 })
 ```
 
-
-### 小结
+## 小结
 
 * 本质
-    * 请求在通过nginx的时候被转发到目标服务器
+  * 请求在通过nginx的时候被转发到目标服务器
 * 缺点
-    * 
 * 优点
-	* 只需要后端进行简单配置，前端请求无差异,和日常ajax请求一样
+  * 只需要后端进行简单配置，前端请求无差异,和日常ajax请求一样
 * 适用场景
-	* 若是要实现多个请求跨域，最好目标服务器的请求地址具有一定的规则，否则每个请求都需求在nginx做配置
+  * 若是要实现多个请求跨域，最好目标服务器的请求地址具有一定的规则，否则每个请求都需求在nginx做配置

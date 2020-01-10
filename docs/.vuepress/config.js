@@ -1,6 +1,6 @@
 module.exports = {
     title: '知识归纳',
-    description: '架构师的路上……',
+    description: '学习的路上……',
     head: [
       ['link', { rel: 'icon', href: 'http://www.uncle-yang.com/pc/image/icon/uncle.ico' }]
     ],
@@ -15,6 +15,7 @@ module.exports = {
         { text: 'gitHub', link: 'https://github.com/awarriorer/growth-diary' },
         { text: '小站', link: 'http://www.uncle-yang.com' },
       ],
+      sidebarDepth: '0',
       sidebar: [
         {
           title: 'HTTP',
@@ -31,7 +32,21 @@ module.exports = {
             '/http/webSocket.md',
             '/http/http-history',
             '/http/api-architecture',
-            '/http/http-optimization.md'
+            '/http/http-optimization.md',
+          ]
+        },
+        {
+          title: '常用跨域方案',
+          collapsable: true,
+          children: [
+            '/http/cross-domain/jsonp.md',
+            '/http/cross-domain/cors.md',
+            '/http/cross-domain/nginx-proxy.md',
+            '/http/cross-domain/server-proxy.md',
+            '/http/cross-domain/iframe-postmessage.md',
+            '/http/cross-domain/iframe-window-name.md',
+            '/http/cross-domain/cors-upload.md',
+            '/http/cross-domain/iframe-form-postMessage-upload.md',
           ]
         },
         {
@@ -50,6 +65,7 @@ module.exports = {
           children: [
             './style/selector.md',
             '/style/layout-center.md',
+            '/style/commonly-used.md',
             '/style/flex.md',
             '/style/less.md',
             '/style/sass.md',

@@ -1,4 +1,5 @@
-### Git 日常命令
+# Git 日常命令
+
 -------
 
 * [最简流程开发](#最简流程开发)
@@ -16,7 +17,9 @@
 * [多密钥配置](#多密钥配置)
 * [合并commit](#合并commit)
 
-#### 最简流程开发
+## 最简流程开发
+
+
 ``` sh
 # 克隆项目
 git clone project_url
@@ -40,7 +43,8 @@ git pull origin branchName
 git push origin branchName
 ```
 
-#### 增加/删除文件
+## 增加/删除文件
+
 ``` sh
 # 添加指定文件到暂存区
 git add [file1] [file2] ...
@@ -68,19 +72,22 @@ git rm -f --cached [file]
 git mv [file-original] [file-renamed]
 ```
 
-#### 分支命名规范
+## 分支命名规范
+
 分支的命名的格式: `$type/$version/$name/$userName`,其中参数含义分别为
+
 * $type: 分支类型
-    * 功能分支: feature, 基于develop分支,最终合并到develop分支
-    * 预发布分支: release, 基于develop分支,最终合并到master分支
-    * BUG分支: fixbug, 基于develop,最终合并到develop分支
-    * 线上BUG热修复: hotfix, 基于master分支,最终合并到master分支
-    * 重构分支: refactor, 基于master分支
+  * 功能分支: feature, 基于develop分支,最终合并到develop分支
+  * 预发布分支: release, 基于develop分支,最终合并到master分支
+  * BUG分支: fixbug, 基于develop,最终合并到develop分支
+  * 线上BUG热修复: hotfix, 基于master分支,最终合并到master分支
+  * 重构分支: refactor, 基于master分支
 * $version: 分支版本
 * $name: 分支的名称，简要描述
 * $userName: 分支创建人
 
-#### 分支管理命令
+## 分支管理命令
+
 ``` sh
 # 查看本地分支
 git branch
@@ -114,7 +121,8 @@ git push origin --delete branchName
 git merge [branch]
 ```
 
-#### 撤销回滚
+## 撤销回滚
+
 ``` sh
 # 恢复暂存区的指定文件到工作区
 git checkout [file]
@@ -146,18 +154,21 @@ git revert -n commitId
 # 然后再push
 git push origin branchName
 ```
+
 ::: tip
 reset(回退)和revert(反做)的区别在于：
+
 * 执行reset命令后，目标版本后的版本将会被删除，减法操作
 * 执行revert命令时，是在目标版本创建出一个新的版本，这个版本和想要回退的版本一样。加法操作
 :::
 
 
-#### 子模块
+## 子模块
+
 ``` sh
 # 如果是原来的项目中有子模块
 # 初始化
-git submodule init 
+git submodule init
 # 更新
 git submodule update
 # 或者执行
@@ -175,9 +186,10 @@ Git rm --cached  -r [path]
 # 4) 手动删除子模块残留的目录
 ```
 
-#### Tag
+## Tag
+
 ``` sh
-# 查看tag 
+# 查看tag
 git tag
 
 # 创建tag
@@ -193,7 +205,8 @@ git tag -d v1.0.0
 git push origin v1.0.0
 ```
 
-#### 添加多个远程仓库
+## 添加多个远程仓库
+
 ``` sh
 # 查看当前源
 git remote
@@ -215,7 +228,8 @@ git pull oschina master
 git pull origin master
 ```
 
-#### 查看信息
+## 查看信息
+
 ``` sh
 # 显示有变更的文件
 git status
@@ -245,18 +259,23 @@ git diff --shortstat "@{0 day ago}"
 git show [commit]
 ```
 
-#### 文件忽略
+## 文件忽略
+
 在项目根目录下，创建`.gitignore`文件，在里面配置git需要忽略的文件，如
-```
+
+``` sh
 node_modules/
 dist/
 ```
+
 强制添加文件到监听队列
+
 ``` sh
 git add -f dist
 ```
 
-#### 用户配置
+## 用户配置
+
 ``` sh
 # 显示当前git配置
 git config --list
@@ -268,45 +287,62 @@ git config -e [--global]
 git config [--global] user.name "[name]"
 git config [--global] user.email "[email address]"
 ```
-#### 密钥配置
+
+## 密钥配置
+
 1. 查看是否已经有了ssh密钥,如果没有密钥则不会有此文件夹，有则备份删除
+
 ``` sh
 cd ~/.ssh
 ```
+
 2. 生存密钥
+
 ``` sh
 ssh-keygen -t rsa -C test@email.com
+
 ```
 按3个回车，密码为空。
+
 ``` sh
 Your identification has been saved in /home/tekkub/.ssh/id_rsa.
 Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.
 The key fingerprint is:
 ………………
 ```
+
 最后得到了两个文件：id_rsa和id_rsa.pub
 
 3. 添加密钥到ssh：ssh-add 文件名,需要之前输入密码
+
 4. 在github上添加ssh密钥，这要添加的是`id_rsa.pub`里面的公钥。打开[https://github.com/](https://github.com/),登陆，然后添加ssh
+
 5. 测试是否成功
+
 ``` sh
 ssh -T git@github.com
 ```
 
-#### 多密钥配置
+## 多密钥配置
+
 当有多个git账号的时候，比如一个github，用于自己进行一些开发活动，再来一个gitlab，一般是公司内部的git。这两者你的邮箱如果不同的话，就会涉及到一个问题，生成第二个git的key的时候会覆盖第一个的key，导致必然有一个用不了
 
 1. 生成密钥
+
 ``` sh
 ssh-keygen -t rsa -C new@email.com
 ```
+
 2. 上方命令执行后，会让你输入新密钥的名称
+
 ``` sh
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/*/.ssh/id_rsa): id_rsa_new
 ```
+
 3. 把新的密钥添加到对应的平台
 4. 在`./.ssh`下创建`config`配置文件，配置以下内容
+
 ``` sh
 # github
 Host github.com
@@ -322,23 +358,31 @@ PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa_new
 User name
 ```
+
 5. 测试
+
 ``` sh
 ssh -T git@github.com
 ```
 
-#### 合并commit
+## 合并commit
+
 从HEAD版本开始往过去数3个版本
+
 ```
 git rebase -i HEAD~3
 ```
+
 指名要合并的版本之前的版本号
+
 ``` sh
 git rebase -i commitId
 ```
+
 执行后，会进入vim窗口，执行`:%s/pick/s/g`后，把第一行的`s`改为`pick`,修改文案，保存推出
 
 推送到服务器
+
 ``` sh
 git add -A
 git rebase --continue  
@@ -346,6 +390,7 @@ git push origin branchName -f
 ```
 
 放弃本次压缩合并
+
 ``` sh
 git rebase --abort  
 ```

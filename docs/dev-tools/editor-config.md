@@ -1,7 +1,9 @@
-### EditorConfig
+# EditorConfig
+
 EditorConfig包含一个用于定义代码格式的文件和一批编辑器插件，这些插件是让编辑器读取配置文件并以此来格式化代码。
 
-#### 常用配置
+## 常用配置
+
 ``` sh
 # 是否是顶级配置文件，设置为true的时候才会停止搜索.editorconfig文件
 root = true
@@ -22,10 +24,13 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 ```
+
 [详细配置](https://editorconfig.org/)
 
-#### 配合使用插件
+## 配合使用插件
+
 * [ESLint](https://cn.eslint.org/)
 
-#### 支持的编辑器
+## 支持的编辑器
+
 ![editors](./images/eritor.png)

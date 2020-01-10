@@ -1,9 +1,11 @@
-### 日常跨域解决方案之(iframe-form-postMessage-upload)
+# iframe-form-postMessage-upload
+
 -------
 
 原理：
 
-http://dev.test.com/iframe-form-postMessage-upload.html
+`http://dev.test.com/iframe-form-postMessage-upload.html`
+
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -190,7 +192,7 @@ http://dev.test.com/iframe-form-postMessage-upload.html
 </html>
 ```
 
-http://dev.example.com/ node server.js
+`http://dev.example.com/` node server.js
 
 ``` js
 var express    = require('express');
@@ -252,7 +254,7 @@ var server = app.listen(3500, function(){
 })
 ```
 
-http://dev.example.com upload-post-message.ejs
+`http://dev.example.com` upload-post-message.ejs
 
 ``` html
 <!DOCTYPE html>
@@ -278,17 +280,16 @@ http://dev.example.com upload-post-message.ejs
 </html>
 ```
 
-
-### 小结
+## 小结
 
 * 本质
-    * from的action=iframe的name,iframe没有跨域限制 
-    * 服务器接受到请求后，通过一个页面以postMessage的方式作为请求的相应
-    * 这里只是用了postMessage作为消息载体，更换载体实现也能实现相同的需求
+  * from的action=iframe的name,iframe没有跨域限制 
+  * 服务器接受到请求后，通过一个页面以postMessage的方式作为请求的相应
+  * 这里只是用了postMessage作为消息载体，更换载体实现也能实现相同的需求
 * 缺点
-    * 前后端都需要做适配，约定回调函数字段名
-    * 上传文件，拿不到上传进度
+  * 前后端都需要做适配，约定回调函数字段名
+  * 上传文件，拿不到上传进度
 * 优点
-    * 
+  * 
 * 适用场景
-	* 任性不兼容低版本浏览器
+  * 任性不兼容低版本浏览器

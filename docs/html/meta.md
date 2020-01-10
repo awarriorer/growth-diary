@@ -1,4 +1,5 @@
-### 关于meta标签
+# 关于meta标签
+
 -------
 
 关于meta都有哪些选项？
@@ -14,7 +15,7 @@
 
 ``` html
 <!-- 声明编码方式 -->
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
 <!-- 版权 -->
 <link rel="copyright" href="copyright.html"/>
 <!-- 关于作者 -->
@@ -42,7 +43,7 @@
 <!-- 网页到期时间，设定网页的到期时间，过期后网页必须到服务器上重新传输 -->
 <meta http-equiv="expires" content="Sunday 26 October 2016 01:00 GMT" />
 <!-- 自动刷新并指向某页面，2秒后跳转向http://www.uncle-yang.com -->
-<meta http-equiv="refresh" content="2；URL=http://www.uncle-yang.com/"> 
+<meta http-equiv="refresh" content="2；URL=http://www.uncle-yang.com/">
 <!-- cookie设定, 如果网页过期。那么这个网页存在本地的cookies也会被自动删除。-->
 <meta http-equiv="Set-Cookie" content="name, date">
 <meta http-equiv="Set-Cookie" content="User=Lxxyx; path=/; expires=Sunday, 10-Jan-16 10:00:00 GMT">
@@ -80,32 +81,32 @@
 <!-- 设置移动端的窗口-->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- 启用 WebApp 全屏模式 --> 
-<meta name="apple-mobile-web-app-capable" content="yes" /> 
-<!-- 隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent 。 --> 
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> 
-<!-- 添加到主屏后的标题 --> 
-<meta name="apple-mobile-web-app-title" content="标题"> 
-<!-- 忽略数字自动识别为电话号码 --> 
-<meta content="telephone=no" name="format-detection" /> 
-<!-- 忽略识别邮箱 --> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- 隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent 。 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<!-- 添加到主屏后的标题 -->
+<meta name="apple-mobile-web-app-title" content="标题">
+<!-- 忽略数字自动识别为电话号码 -->
+<meta content="telephone=no" name="format-detection" />
+<!-- 忽略识别邮箱 -->
 <meta content="email=no" name="format-detection" />
-<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 --> 
-<meta name="HandheldFriendly" content="true"> 
-<!-- 微软的老式浏览器 --> 
-<meta name="MobileOptimized" content="320"> 
-<!-- uc强制竖屏 --> 
-<meta name="screen-orientation" content="portrait"> 
-<!-- QQ强制竖屏 --> 
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
 <meta name="x5-orientation" content="portrait">
-<!-- UC强制全屏 --> 
-<meta name="full-screen" content="yes"> 
-<!-- QQ强制全屏 --> 
-<meta name="x5-fullscreen" content="true"> 
-<!-- UC应用模式 --> 
-<meta name="browsermode" content="application"> 
-<!-- QQ应用模式 --> 
-<meta name="x5-page-mode" content="app"> 
-<!-- windows phone 点击无高光 --> 
+<!-- UC强制全屏 -->
+<meta name="full-screen" content="yes">
+<!-- QQ强制全屏 -->
+<meta name="x5-fullscreen" content="true">
+<!-- UC应用模式 -->
+<meta name="browsermode" content="application">
+<!-- QQ应用模式 -->
+<meta name="x5-page-mode" content="app">
+<!-- windows phone 点击无高光 -->
 <meta name="msapplication-tap-highlight" content="no">
 
 <!-- 移动端渲染 end！-->

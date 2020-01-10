@@ -1,20 +1,23 @@
-### 工厂模式(Factory)
+# 工厂模式(Factory)
+
 ------
 建立一个工厂类，对实现了同一接口的一些类进行实例的创建
 
-#### 适用于
+## 适用于
+
 * 创建对象需要大量重复的代码
 * 创建对象需要访问某些信息，而这些信息不应该包含在复合类中
 * 创建对象的生命周期必须集中管理，以保证在整个程序中具有一致的行为
 
-#### 例子
+## 例子
+
 ``` js
 class Personal {
     constructor (name, age) {
         this.name = name;
         this.age = age;
     }
-    
+
     sayHello() {
         console.log(`Hello, I'm ${this.name}`);
     }

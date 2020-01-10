@@ -1,7 +1,7 @@
-### 模板编译都经历了那些什么
--------
+# 模板编译都经历了那些什么
 
 首先回顾一下`vue._init()`这个函数
+
 ``` js
 Vue.prototype._init = function (options?: Object) {
     // …………，各种状态初始化
@@ -12,9 +12,11 @@ Vue.prototype._init = function (options?: Object) {
     }
 }
 ```
+
 从上面的代码中可以看出，在`init`函数最后，执行了`$mount`这个函数。
 
-#### $mount
+## $mount
+
 ``` js
 // platforms/web/runtime/index.js
 // public mount method
@@ -108,7 +110,8 @@ Vue.prototype.$mount = function (
 }
 ```
 
-#### 那么模版是怎么编译的？
+## 那么模版是怎么编译的
+
 从上面的代码中，可以看出，最后执行了`compileToFunctions`函数得到了`render`和`staticRenderFns`函数。那么也就是是，模版的解析是在`compileToFunctions`这个函数中实现的。继续扒代码
 
 ``` js

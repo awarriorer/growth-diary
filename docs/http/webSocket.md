@@ -1,19 +1,22 @@
-### 关于webSocket
+# 关于webSocket
+
 在webSocket还未出世之前，网站要想实现即时通讯，都是采用HTTP轮询的方式来获取最新的服务器信息。比如，每隔一秒就请求一下服务器当前状态，即使服务端的数据没有任何变化，这个请求还是会发出，这造成了极度的资源浪费。只因为服务端无法主动给浏览器推送消息。
 
 webSocket的出现，让上述的问题得以解决。
 
 webSocket使用`ws`或者`wss`做统一的资源标识符。类似于HTTPS，其中`wss`表示是在`TLS`之上的webSocket。如
 
-```
+``` json
 // webSocket界的http
 ws://example.com/wsapi
 // webSocket界的https
 wss://secure.example.com
 ```
+
 websocket使用和 HTTP 相同的 TCP 端口，可以绕过大多数防火墙的限制。默认情况下，Websocket协议使用80端口；运行在TLS之上时，默认使用443端口。
 
-#### webSocket的优点
+## webSocket的优点
+
 * 较少的控制开销。在连接建立后，服务器和客户端之间交换数据时，用于协议控制的数据包头部相对较小。在不包含扩展的情况下，对于服务器到客户端的内容，此头部大小只有2至10字节（和数据包长度有关）；对于客户端到服务器的内容，此头部还需要加上额外的4字节的掩码。相对于HTTP请求每次都要携带完整的头部，此项开销显著减少了。
 
 * 更强的实时性。由于协议是全双工的，所以服务器可以随时主动给客户端下发数据。相对于HTTP请求需要等待客户端发起请求服务端才能响应，延迟明显更少；即使是和Comet等类似的长轮询比较，其也能在短时间内更多次地传递数据。
@@ -26,7 +29,6 @@ websocket使用和 HTTP 相同的 TCP 端口，可以绕过大多数防火墙的
 
 * 更好的压缩效果。相对于HTTP压缩，Websocket在适当的扩展支持下，可以沿用之前内容的上下文，在传递类似的数据时，可以显著地提高压缩率。
 
-
-#### webSocket Demo
+## webSocket Demo
 
 [利用socket.io做的简单的demo](https://github.com/awarriorer/mycode/tree/master/http/webSocket-demo)

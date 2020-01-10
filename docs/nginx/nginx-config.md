@@ -55,8 +55,6 @@ http {
     #定义使用 localhost访问
     server_name  localhost;
 
-    #charset koi8-r;
-
     #设定本虚拟主机的访问日志
     #access_log  logs/host.access.log  main;
 
@@ -114,13 +112,13 @@ http {
   #    }
   #}
 
-
+  # https 服务
   # HTTPS server
   #
   #server {
   #    listen       443 ssl;
   #    server_name  localhost;
-
+  #    加密文件路径
   #    ssl_certificate      cert.pem;
   #    ssl_certificate_key  cert.key;
 
@@ -135,6 +133,8 @@ http {
   #        index  index.html index.htm;
   #    }
   #}
+  
+  # 包含的配置文件
   include servers/*;
 }
 

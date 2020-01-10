@@ -1,9 +1,10 @@
-### Chrome
+# Chrome
+
 谷歌开发者工具[详细文档](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn)
 
+## 命令截图
 
-#### 命令截图
-1. 打开开发者工具: 
+1. 打开开发者工具:
     * mac: `command + option + j`
     * window: `f12`、`Ctrl + Shift + i`
 2. 打开命令模式

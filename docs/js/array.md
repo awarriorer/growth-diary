@@ -1,9 +1,11 @@
-### Array
+# Array
+
 -------
 
 Array,数组集合
 
-#### 查
+## 查
+
 ``` js
 var arr = [2, 3, 4, 2, 3, 4];
 
@@ -80,7 +82,8 @@ console.log(arr.slice(3, 5)); // [2, 3]
 console.log(arr.slice()); // [2, 3, 4, 2, 3, 4]，完全浅拷贝
 ```
 
-#### 改
+## 改
+
 ``` js
 var arr = [2, 3, 4];
 
@@ -144,7 +147,9 @@ console.log([1,3,2,7,5,6].sort((firstEl, secondEl) => {
     //return secondEl - firstEl;
 })); // [7, 6, 5, 3, 2, 1]
 ```
-#### 增
+
+## 增
+
 ``` js
 var arr = [2, 3];
 
@@ -162,6 +167,7 @@ arr.unshift(a); // [1, 2, 3, 4, 5]
 // concat,该函数返回的是新数组，并不会改变原数组
 console.log(arr.concat(['you', 'me', 'he'])); // [2, 3, 4, "you", "me", "he"]
 ```
+
 ::: tip
 若加入一个值的脚标 > length, 如 arr[6] = 6; 那么arr.length = 6; 且没有赋值的元素为undefined，arr[4] = undefined
 
@@ -175,7 +181,8 @@ console.log(arr[3]); // undefined
 ```
 :::
 
-#### 删
+## 删
+
 ``` js
 var arr = [1, 2, 3, 4, 5];
 
@@ -186,14 +193,14 @@ arr.pop(); // [1, 2, 3, 4]
 arr.shift(); // [2, 3, 4]
 ```
 
-#### 操作
+## 操作
+
 ``` js
 /**
  * splice(startIndex, deleteCount, [item1], [item2], [item3], [……]])
  * 通过删除现有元素和/或添加新元素来修改数组,并以数组返回原数组中被修改的
  * startIndex: 开始的脚标
  * deleteCount: 要删除的个数，注意是个数，不是位置！
- * 
  * 可以通过该方法实现对数组的，增，删，改
  */
 
@@ -238,7 +245,8 @@ arr_e.splice(1, 1, 6, 7, 8);
 console.log(arr_e); // [1, 6, 7, 8, 3, 4]
 ```
 
-#### 判断
+## 判断
+
 ``` js
 Array.isArray([1, 2, 3]);  
 // true
@@ -250,7 +258,8 @@ Array.isArray(undefined);
 // false
 ```
 
-#### 转字符串
+## 转字符串
+
 ``` js
 var elements = ['Fire', 'Wind', 'Rain'];
 
@@ -264,7 +273,8 @@ console.log(elements.join('-'));
 //"Fire-Wind-Rain"
 ```
 
-#### 将类似数组转化成一个数组
+## 将类似数组转化成一个数组
+
 ``` js
 console.log(Array.from('abc')); // ["a", "b", "c"]
 ```

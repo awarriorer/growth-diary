@@ -1,8 +1,10 @@
-### Ajax
+# Ajax
+
 在js中，和服务器通信主要通过XMLHttpRequest(XHR)实现。
 
-#### 常用的方法和属性
-``` js 
+## 常用的方法和属性
+
+``` js
 let xhr = new XMLHttpRequest();
 
 /**

@@ -1,48 +1,48 @@
-### Vscode
----------
+# Vscode
 
-#### 快捷键 Mac
+## 快捷键 Mac
 
 * `command + p`
-	* `main.js` 输入文件夹名称，全局搜索文件命令框
-	* `?` 显示当前可以执行的动作
-	* `: 33` 跳转到第33行
-	* `@ app` 跳转到app函数或者方法
+  * `main.js` 输入文件夹名称，全局搜索文件命令框
+  * `?` 显示当前可以执行的动作
+  * `: 33` 跳转到第33行
+  * `@ app` 跳转到app函数或者方法
 
 * 搜索
-	* `command + f` 当前文件搜索
-	* `command + shift + f` 全局搜索
+  * `command + f` 当前文件搜索
+  * `command + shift + f` 全局搜索
 
 * 代码格式
-	* `command + [` `shift + table` 左边缩进 
-	* `command + ]` `table` 右边缩进 
-	* `option + shift + up/down` 向上向下复制一行
-	* `command + X` 剪切当前行
-	* `command + C` 复制当前行
-	* `command + Delete` 删除当前行
-	* `command + Enter` 向下插入一行
-	* `command + shift + Enter` 向上插入一行
-	* `option + shift + F` 格式化代码
-	* `option + Up/Down` 上下移动行
+  * `command + [` `shift + table` 左边缩进 
+  * `command + ]` `table` 右边缩进 
+  * `option + shift + up/down` 向上向下复制一行
+  * `command + X` 剪切当前行
+  * `command + C` 复制当前行
+  * `command + Delete` 删除当前行
+  * `command + Enter` 向下插入一行
+  * `command + shift + Enter` 向上插入一行
+  * `option + shift + F` 格式化代码
+  * `option + Up/Down` 上下移动行
 
 * 光标位置和选中
-	* `command + D` 选中下一个相同的值
-	* `command + shift + L` 选中相同的值
-	* `control + G` 跳转到行数
-	* `option + shift + 拖动鼠标` 选中多个区域
-	* `command + Up/Down` 文件夹开始,结束
-	* `command + Left/Right` 行首,行尾
-	* `command + shift + \` 光标跳转到括号末尾
-	* `command + I` 选中当起行
+  * `command + D` 选中下一个相同的值
+  * `command + shift + L` 选中相同的值
+  * `control + G` 跳转到行数
+  * `option + shift + 拖动鼠标` 选中多个区域
+  * `command + Up/Down` 文件夹开始,结束
+  * `command + Left/Right` 行首,行尾
+  * `command + shift + \` 光标跳转到括号末尾
+  * `command + I` 选中当起行
 
 * 编辑器与窗口
-	* `command + N` 新文件
-	* `command + W` 关闭当前tab
-	* `command + shift + N` 新窗口
-	* `command + shift + W` 关闭窗口
-	* `command + option + Left/Right` 切换tab
+  * `command + N` 新文件
+  * `command + W` 关闭当前tab
+  * `command + shift + N` 新窗口
+  * `command + shift + W` 关闭窗口
+  * `command + option + Left/Right` 切换tab
 
-#### 前端常用插件
+## 前端常用插件
+
 * `ESLint` 语法检查
 * `TSLint` TS语法检查
 * `vue` vue开发
@@ -59,7 +59,8 @@
 * `Path Intellisense` 路径自动补全
 * `vscode-fileheader` 顶部注释模板，可定义作者、时间等信息，并会自动更新最后修改时间;快捷键: Ctrl+Alt+i (默认信息可在 文件→首选项→设置 中修改)
 
-#### Vscode 遇到的问题
+## Vscode 遇到的问题
+
 * 问题：Mac中，由 Vscode 引出的`code helper`进程占用内存过高
 解决办法: 打开vscode的配置文件，添加以下代码排除代码
 

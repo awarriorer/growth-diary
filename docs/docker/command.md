@@ -1,40 +1,43 @@
-### Docker 日常命令
+# Docker 日常命令
 
-#### Docker 服务
+## Docker 服务
+
 * 启动 `sudo service docker start`
 * 重启 `sudo service docker restart`
 * 停止 `service docker stop`
 
-#### Dockerfile 基础语法
-``` md
+## Dockerfile 基础语法
+
+``` sh
 # 这里是注释！
 
 # 基础镜像
-FROM 
+FROM
 
 # 维护人，以及维护人email
 MAINTAINER
 
 # 环境变量
-ENV 
+ENV
 
 # 复制文件到container里面，同时还有一个copy指令，区别：add 可以直接复制完成后解压, add url (空格) tourl
-ADD 
+ADD
 
 # 执行命令
 RUN
 
 # 安装进程管理工具
-RUN pip install supervisor 
+RUN pip install supervisor
 
 # 把container的22端口和宿主机进行映射
-EXPOSE 
+EXPOSE
 
 # container每次启动的时候，要执行的命令。注意：可以写多条，但是只要最后一条起作用
 ENTRYPOINT 
 ```
 
-#### 镜像
+## 镜像
+
 ``` md
 # 制作镜像
 docker build -t youerImageName DockerfileUrl
@@ -52,7 +55,8 @@ docker images
 docker rmi dockerName|imageId
 ```
 
-#### 容器
+## 容器
+
 ``` md
 # 创建容器
 docker run [OPTIONS] IMAGE[:TAG] [COMMAND] [ARG...]
@@ -80,7 +84,8 @@ exit
 
 ```
 
-#### 批量操作命令
+## 批量操作命令
+
 ``` md
 # 启动所有未启动容器
 docker start $(docker ps -a | awk '{ print $1}' | tail -n +2)

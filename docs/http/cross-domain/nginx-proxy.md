@@ -1,9 +1,11 @@
-### 日常跨域解决方案之(nginx-proxy)
+# nginx-proxy
+
 -------
 
 ngin代理是实现跨域请求的一种后端实现手段，原理相对来说也很容易理解。就是在请求通过nginx的时候，把请求转发给目标服务器。
 
-http://dev.test.com/nginx-proxy.html
+`http://dev.test.com/nginx-proxy.html`
+
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +63,7 @@ http://dev.test.com/nginx-proxy.html
 </html>
 ```
 
-http://dev.example.com node server.js
+`http://dev.example.com` node server.js
 
 ``` js
 var express = require('express');
@@ -87,7 +89,8 @@ var server = app.listen(3500, function(){
 ```
 
 nginx 配置
-```
+
+``` sh
 server {
 	listen       80;
 	server_name  dev.test.com;
@@ -128,13 +131,12 @@ server {
 
 ```
 
-### 小结
+## 小结
 
 * 本质
-    * 请求在通过nginx的时候被转发到目标服务器
+  * 请求在通过nginx的时候被转发到目标服务器
 * 缺点
-    * 
 * 优点
-	* 只需要后端进行简单配置，前端请求无差异,和日常ajax请求一样
+  * 只需要后端进行简单配置，前端请求无差异,和日常ajax请求一样
 * 适用场景
-	* 若是要实现多个请求跨域，最好目标服务器的请求地址具有一定的规则，否则每个请求都需求在nginx做配置
+  * 若是要实现多个请求跨域，最好目标服务器的请求地址具有一定的规则，否则每个请求都需求在nginx做配置

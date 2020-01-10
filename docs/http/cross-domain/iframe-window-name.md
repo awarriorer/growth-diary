@@ -1,9 +1,10 @@
-### 日常跨域解决方案之(iframe-window.name)
+# iframe-window.name
+
 -------
 
 原理：
+`http://dev.test.com/iframe-window.name.html`
 
-http://dev.test.com/iframe-window.name.html
 ``` html
 <!DOCTYPE html>
 <html lang="en">
@@ -96,7 +97,9 @@ http://dev.test.com/iframe-window.name.html
 </body>
 </html>
 ```
-http://dev.example.com node server.js
+
+`http://dev.example.com` node server.js
+
 ``` js
 var express    = require('express');
 var app        = express();
@@ -152,15 +155,15 @@ http://dev.example.com iframe-window-name.ejs
 </html>
 ```
 
-### 小结
+## 小结
 
 * 本质
-    * 动态创建iframe标签，请求地址就是其src,服务器会返回一个html文件，html中把window.name的值设置成请求结果，然后，再把iframe的src改成本域下的一个空页面，从而可以拿到window.name的值，也就是请求结果
+  * 动态创建iframe标签，请求地址就是其src,服务器会返回一个html文件，html中把window.name的值设置成请求结果，然后，再把iframe的src改成本域下的一个空页面，从而可以拿到window.name的值，也就是请求结果
 * 缺点
-    * 只支持get请求
-    * 会插入删除dom，可能会有性能问题
+  * 只支持get请求
+  * 会插入删除dom，可能会有性能问题
 * 优点
-    * 兼容性良好
+  * 兼容性良好
 * 适用场景和使用心得
-	* 虽然只支持get请求，但是我们的可以通过参数表明请求类型，然后在Api网关层再做一次识别，从而达到其他类型请求的目的
-	* 无法上传文件
+  * 虽然只支持get请求，但是我们的可以通过参数表明请求类型，然后在Api网关层再做一次识别，从而达到其他类型请求的目的
+  * 无法上传文件

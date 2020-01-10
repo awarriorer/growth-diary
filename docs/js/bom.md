@@ -1,21 +1,23 @@
-### Bom
+# Bom
+
 ----------
 Bom(浏览器对象模型),与浏览器窗口交互时用到的对象。其主要组成部分为
+
 * [Window: 当前窗口](#window)
 * [Location: 地址栏对象](#location)
 * [History: 历史对象](#history)
 * [Screen: 屏幕对象](#screen)
 * [Navigator: 代理信息](#navigator)
 
+## window
 
-#### window
 ``` js
 // 浏览器视口(viewport)的宽高
-console.log(window.innerWidth); 
+console.log(window.innerWidth);
 console.log(window.innerHeight);
 
 // 整个浏览器窗口的宽高
-console.log(window.outerWidth); 
+console.log(window.outerWidth);
 console.log(window.outerHeight);
 
 //窗口大小改变时触发
@@ -33,7 +35,8 @@ window.scrollTo(x, y);
 
 ```
 
-#### Location
+## Location
+
 ``` js
 var location = window.Location;
 
@@ -62,7 +65,8 @@ location.reload(url);
 //刷新当前页面,forceReload = true,强制刷新拒绝使用缓存，false,可能会使用缓存
 location.reload(forceReload);
 ```
-#### History
+## History
+
 ``` js
 var history = window.history;
 
@@ -112,7 +116,8 @@ window.addEventListener('popstate', function(e){
 }, false);
 ```
 
-#### Screen
+## Screen
+
 ``` js
 //屏幕 & 浏览器位置信息
 console.log(window.screen);
@@ -122,7 +127,8 @@ console.log(window.screenX  || window.screenLeft);
 console.log(window.screenY  || window.screenTop);
 
 ```
-#### Navigator
+## Navigator
+
 获取浏览器信息，用户代理的状态和标识
 ``` js
 let navigator = window.navigator;

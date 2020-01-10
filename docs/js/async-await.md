@@ -1,8 +1,10 @@
-### Async await
+# Async await
+
 ---------
 `async function` 关键字用来在表达式中定义异步函数;
 
-#### 例子
+## 例子
+
 ``` js
 // 定义函数，返回一个Promise,1秒后完成，
 function f1(){

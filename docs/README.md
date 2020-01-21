@@ -28,14 +28,14 @@ Hi,我是大叔杨，一名前端开发者。我将在这个项目中记录总�
 
 ## 常用跨域方案
 
-* [Jsonp]('/http/cross-domain/jsonp.md')
-* [CORS]('/http/cross-domain/cors.md')
-* [Nginx-proxy]('/http/cross-domain/nginx-proxy.md')
-* [Server-proxy]('/http/cross-domain/server-proxy.md')
-* [Iframe-postmessage]('/http/cross-domain/iframe-postmessage.md')
-* [Iframe-window-name]('/http/cross-domain/iframe-window-name.md')
-* [Cors-upload]('/http/cross-domain/cors-upload.md')
-* [Iframe-form-postMessage-upload]('/http/cross-domain/iframe-form-postMessage-upload.md')
+* [Jsonp](./http/cross-domain/jsonp.md)
+* [CORS](./http/cross-domain/cors.md)
+* [Nginx-proxy](./http/cross-domain/nginx-proxy.md)
+* [Server-proxy](./http/cross-domain/server-proxy.md)
+* [Iframe-postmessage](./http/cross-domain/iframe-postmessage.md)
+* [Iframe-window-name](./http/cross-domain/iframe-window-name.md)
+* [Cors-upload](./http/cross-domain/cors-upload.md)
+* [Iframe-form-postMessage-upload](./http/cross-domain/iframe-form-postMessage-upload.md)
 
 ## HTMl
 

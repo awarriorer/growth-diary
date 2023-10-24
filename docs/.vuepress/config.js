@@ -1,6 +1,15 @@
+const env = process.env.NODE_ENV;
+
+let base = '/'
+
+if (env === 'gitHubDeploy') {
+  base = '/growth-diary/'
+}
+
 module.exports = {
     title: '知识归纳',
     description: '学习的路上……',
+    base,
     head: [
       ['link', { rel: 'icon', href: 'http://www.uncle-yang.com/pc/image/icon/uncle.ico' }]
     ],

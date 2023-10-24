@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "doc": "docs",
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "build:deploy": "cross-env NODE_ENV=gitHubDeploy vuepress build docs",
+    "deploy": "bash ./deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,8 @@
   "dependencies": {
     "express": "^4.16.3",
     "vuepress": "^1.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

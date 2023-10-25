@@ -9,7 +9,6 @@
     "doc": "docs",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "build:deploy": "cross-env NODE_ENV=gitHubDeploy vuepress build docs",
     "deploy": "bash ./deploy.sh"
   },
   "repository": {
